@@ -4,8 +4,10 @@
 
 <details style="margin-left: 1rem">
 <summary>Hello</summary>
-<div>
-<img src="assets/images/hugh.ahn.jpg" />
+<div style="border: 1px solid #fafafa; padding: 0.5rem">
+
+<img src="assets/images/hugh.ahn.jpg" style="max-width: 400px;" />
+
 </div>
 </details>
 
