@@ -5,7 +5,7 @@
 <details style="margin-left: 1rem">
 <summary>Hello</summary>
 <div>
-<img src="assets/images/hugh.ahn.png" />
+<img src="assets/images/hugh.ahn.jpg" />
 </div>
 </details>
 
