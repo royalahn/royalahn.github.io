@@ -1,5 +1,9 @@
 {
+  "title": "Hugh GitBook",
   "structure": {
     "readme": "README.md"
+  },
+  "styles": {
+    "website": "assets/css/website.css"
   }
 }
