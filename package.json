@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "gitbook serve",
-    "build": "gitbook build"
+    "build": "gitbook build",
+    "prebuild": "gitbook install"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "2.3.2"
+  }
 }
