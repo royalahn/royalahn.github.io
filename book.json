@@ -14,7 +14,7 @@
   "pluginsConfig": {
     "fontsettings": {
       "theme": "white",
-      "family": "serif",
+      "family": "sans",
       "size": 1
     }
   }

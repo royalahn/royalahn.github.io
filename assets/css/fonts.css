@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'MaruBuri-Regular';
+  src: url('../fonts/MaruBuri-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('../fonts/IBMPlexSansKR-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
