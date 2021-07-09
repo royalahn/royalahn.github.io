@@ -1,9 +1,21 @@
 {
   "title": "Hugh GitBook",
-  "structure": {
-    "readme": "README.md"
-  },
   "styles": {
     "website": "assets/css/website.css"
+  },
+  "plugins": [
+    "splitter",
+    "expandable-chapters-small",
+    "toggle-chapters",
+    "page-toc",
+    "copy-code-button",
+    "-sharing"
+  ],
+  "pluginsConfig": {
+    "fontsettings": {
+      "theme": "white",
+      "family": "serif",
+      "size": 1
+    }
   }
 }

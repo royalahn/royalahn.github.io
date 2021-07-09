@@ -1,5 +1,6 @@
 # Summary
 
+* [🐇 Home](README.md)
 * [👻 Diaries](posts/diaries/README.md)
     * [01. Normal Day](posts/diaries/01_normal.md)
     * [02. Hard Day](posts/diaries/02_hard.md)
