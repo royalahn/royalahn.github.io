@@ -6,7 +6,8 @@
   "scripts": {
     "start": "gitbook serve",
     "build": "gitbook build",
-    "prebuild": "gitbook install"
+    "prebuild": "gitbook install",
+    "upload": "upload.bat"
   },
   "keywords": [],
   "author": "",
