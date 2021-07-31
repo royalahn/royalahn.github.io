@@ -10,3 +10,4 @@
 * [🐣 Tips](posts/tips/README.md)
     * [01. Zsh](posts/tips/01_zsh.md)
     * [02. Rancher](posts/tips/02_rancher.md)
+    * [02. Gitbook](posts/tips/03_gitbook.md)
