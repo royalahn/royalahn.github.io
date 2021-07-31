@@ -15,10 +15,12 @@ sudo apt install zsh git
 #### 1.2 CentOS / Oracle Linux
 
 ```shell
+# yum을 이용한 방법
 sudo yum install zsh git
 ```
 
 ```shell
+# dnf를 이용한 방법
 sudo dnf install zsh git
 ```
 
@@ -41,14 +43,17 @@ chsh -s $(which zsh) $USER
 > 참고: [zsh-users](https://github.com/zsh-users)
 
 ```shell
+# zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 ```shell
+# zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 ```shell
+# zsh-completions
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 ```
 
@@ -58,9 +63,8 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 vi ~/.zshrc
 ```
 
-에서 아래부분을 변경
-
 ```shell
+# 아래 부분을 찾아서 변경
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-completions)
 ```
 
@@ -74,9 +78,8 @@ source ~/.zshrc
 vi ~/.zshrc
 ```
 
-에서 아래부분을 변경
-
 ```shell
+# 아래 부분을 찾아서 변경
 ZSH_THEME="agnoster"
 ```
 
