@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>👻 Diaries · Hugh GitBook</title>
+        <title>02. Gitbook · Hugh GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="01_normal.html" />
     
-    
-    <link rel="prev" href="../../" />
+    <link rel="prev" href="02_rancher.html" />
     
 
     </head>
@@ -110,9 +108,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../diaries/">
             
-                <a href="./">
+                <a href="../diaries/">
             
                     
                     👻 Diaries
@@ -124,9 +122,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="01_normal.html">
+        <li class="chapter " data-level="1.2.1" data-path="../diaries/01_normal.html">
             
-                <a href="01_normal.html">
+                <a href="../diaries/01_normal.html">
             
                     
                     01. Normal Day
@@ -137,9 +135,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="02_hard.html">
+        <li class="chapter " data-level="1.2.2" data-path="../diaries/02_hard.html">
             
-                <a href="02_hard.html">
+                <a href="../diaries/02_hard.html">
             
                     
                     02. Hard Day
@@ -200,9 +198,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../tips/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../tips/">
+                <a href="./">
             
                     
                     🐣 Tips
@@ -214,9 +212,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../tips/01_zsh.html">
+        <li class="chapter " data-level="1.4.1" data-path="01_zsh.html">
             
-                <a href="../tips/01_zsh.html">
+                <a href="01_zsh.html">
             
                     
                     01. Zsh
@@ -227,9 +225,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../tips/02_rancher.html">
+        <li class="chapter " data-level="1.4.2" data-path="02_rancher.html">
             
-                <a href="../tips/02_rancher.html">
+                <a href="02_rancher.html">
             
                     
                     02. Rancher
@@ -240,9 +238,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../tips/03_gitbook.html">
+        <li class="chapter active" data-level="1.4.3" data-path="03_gitbook.html">
             
-                <a href="../tips/03_gitbook.html">
+                <a href="03_gitbook.html">
             
                     
                     02. Gitbook
@@ -288,7 +286,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >👻 Diaries</a>
+        <a href="../.." >02. Gitbook</a>
     </h1>
 </div>
 
@@ -303,8 +301,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="diaries">Diaries</h1>
-<p>&#xB2E4;&#xC774;&#xC5B4;&#xB9AC; &#xD398;&#xC774;&#xC9C0; &#xC785;&#xB2C8;&#xB2E4;.</p>
+                                <h1 id="gitbook">Gitbook</h1>
+<p><strong>gitbook-cli</strong>&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; <code>gitbook install</code> &#xC2DC; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xC5D0;&#xB7EC; &#xCC98;&#xB9AC; &#xBC29;&#xBC95; (&#xAE30;&#xB85D;&#xC6A9;)</p>
+<pre><code class="lang-shell">Installing GitBook 3.2.3
+/usr/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js:287
+      if (cb) cb.apply(this, arguments)
+                 ^
+
+TypeError: cb.apply is not a function
+    at /usr/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js:287:18
+    at FSReqCallback.oncomplete (node:fs:196:5)
+</code></pre>
+<p><code>gitbook install</code> &#xC2DC; dependency&#xAC00; &#xC788;&#xB294; <strong>graceful-fs</strong> &#xC758; &#xBC84;&#xC804;&#xC774; <code>4.1.11</code>&#xC73C;&#xB85C; &#xD638;&#xD658;&#xC131; &#xBB38;&#xC81C;&#xAC00; &#xC874;&#xC7AC;&#xD558;&#xC5EC; <code>4.1.4</code>&#xB85C; downgrade&#xB97C; &#xD574;&#xC918;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<blockquote>
+<p>&#xCC38;&#xACE0;: <a href="https://github.com/GitbookIO/gitbook-cli/issues/110" target="_blank">Gitbook build stopped to work in node 12.18.3</a></p>
+</blockquote>
+<h3 id="gitbook-cli&#xB97C;-global&#xB85C;-&#xC124;&#xCE58;&#xD560;-&#xACBD;&#xC6B0;-&#xC124;&#xCE58;-&#xB41C;-&#xACBD;&#xB85C;&#xB85C;-&#xC774;&#xB3D9;">gitbook-cli&#xB97C; global&#xB85C; &#xC124;&#xCE58;&#xD560; &#xACBD;&#xC6B0; &#xC124;&#xCE58; &#xB41C; &#xACBD;&#xB85C;&#xB85C; &#xC774;&#xB3D9;</h3>
+<pre><code class="lang-shell"># Linux
+cd /usr/lib/node_modules/gitbook-cli/node_modules/npm
+
+# Windows
+cd C:\Users\&lt;USERNAME&gt;\AppData\Roaming\npm\node_modules\gitbook-cli\node_modules\npm
+</code></pre>
+<h3 id="graceful-fs-414-&#xBC84;&#xC804;&#xC73C;&#xB85C;-&#xC7AC;&#xC124;&#xCE58;">graceful-fs 4.1.4 &#xBC84;&#xC804;&#xC73C;&#xB85C; &#xC7AC;&#xC124;&#xCE58;</h3>
+<pre><code class="lang-shell">npm install graceful-fs@4.1.4
+</code></pre>
+<h3 id="gitbook-&#xD3F4;&#xB354;&#xC5D0;&#xC11C;-gitbook-install-&#xC2E4;&#xD589;">gitbook &#xD3F4;&#xB354;&#xC5D0;&#xC11C; gitbook install &#xC2E4;&#xD589;</h3>
+<pre><code class="lang-shell">gitbook install
+</code></pre>
 
                                 
                                 </section>
@@ -332,14 +356,10 @@
 
             
                 
-                <a href="../../" class="navigation navigation-prev " aria-label="Previous page: 🐇 Home">
+                <a href="02_rancher.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 02. Rancher">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="01_normal.html" class="navigation navigation-next " aria-label="Next page: 01. Normal Day">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -348,7 +368,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"👻 Diaries","level":"1.2","depth":1,"next":{"title":"01. Normal Day","level":"1.2.1","depth":2,"path":"posts/diaries/01_normal.md","ref":"posts/diaries/01_normal.md","articles":[]},"previous":{"title":"🐇 Home","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"highlight":{},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/diaries/README.md","mtime":"2021-07-31T11:55:41.014Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-31T12:24:06.169Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"02. Gitbook","level":"1.4.3","depth":2,"previous":{"title":"02. Rancher","level":"1.4.2","depth":2,"path":"posts/tips/02_rancher.md","ref":"posts/tips/02_rancher.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"highlight":{},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/tips/03_gitbook.md","mtime":"2021-07-31T12:23:59.144Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-31T12:24:06.169Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
