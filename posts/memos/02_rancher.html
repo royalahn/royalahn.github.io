@@ -33,7 +33,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-dracula.css">
                 
             
                 
@@ -312,11 +312,11 @@
 <blockquote>
 <p>&#xCC38;&#xACE0;: <a href="https://github.com/rancher/install-docker" target="_blank">GitHub rancher/install-docker</a></p>
 </blockquote>
-<pre><code class="lang-shell"># Docker 20.10 (&#xCD94;&#xCC9C;)
-curl https://releases.rancher.com/install-docker/20.10.sh | sh
+<pre class="language-"><code class="lang-bash"><span class="token comment"># Docker 20.10 (&#xCD94;&#xCC9C;)</span>
+<span class="token function">curl</span> https://releases.rancher.com/install-docker/20.10.sh <span class="token operator">|</span> <span class="token function">sh</span>
 </code></pre>
-<pre><code class="lang-shell"># Docker 19.03
-curl https://releases.rancher.com/install-docker/19.03.sh | sh
+<pre class="language-"><code class="lang-bash"><span class="token comment"># Docker 19.03</span>
+<span class="token function">curl</span> https://releases.rancher.com/install-docker/19.03.sh <span class="token operator">|</span> <span class="token function">sh</span>
 </code></pre>
 <h3 id="12-docker&#xC5D0;&#xC11C;-&#xC81C;&#xACF5;&#xD558;&#xB294;-&#xBC29;&#xBC95;">1.2 Docker&#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xBC29;&#xBC95;</h3>
 <blockquote>
@@ -329,20 +329,20 @@ curl https://releases.rancher.com/install-docker/19.03.sh | sh
 <p>&#xCC38;&#xACE0;: <a href="https://docs.docker.com/engine/install/centos/" target="_blank">Install Docker Engine on CentOS</a></p>
 <p>&#xC544;&#xC27D;&#xAC8C;&#xB3C4; 2021-07-31 &#xD604;&#xC7AC; Oracle Linux 8.4 arm64&#xC5D0;&#xC11C;&#xB294; &#xB3D9;&#xC791;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xAC70; &#xAC19;&#xC74C;.</p>
 </blockquote>
-<pre><code class="lang-shell">curl -fsSL https://get.docker.com -o get-docker.sh
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> -fsSL https://get.docker.com -o get-docker.sh
 </code></pre>
-<pre><code class="lang-shell">sudo sh get-docker.sh
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">sh</span> get-docker.sh
 </code></pre>
 <h3 id="2-rancher-&#xC124;&#xCE58;">2. Rancher &#xC124;&#xCE58;</h3>
 <blockquote>
 <p>&#xCC38;&#xACE0;: <a href="https://rancher.com/docs/rancher/v2.5/en/installation/other-installation-methods/single-node-docker/" target="_blank">Installing Rancher on a Single Node Using Docker</a></p>
 <p>&#xCC38;&#xACE0;: <a href="https://rancher.com/docs/rancher/v2.5/en/installation/other-installation-methods/single-node-docker/advanced/" target="_blank">Advanced Options for Docker Installs</a></p>
 </blockquote>
-<pre><code class="lang-shell"># &#xD3EC;&#xD2B8;&#xB294; &#xBCC0;&#xACBD; &#xAC00;&#xB2A5; (-p 8080:80 -p 8443:443)
-docker run -d --restart=unless-stopped \
-  -p 80:80 -p 443:443 \
-  -v /opt/rancher:/var/lib/rancher \
-  --privileged \
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#xD3EC;&#xD2B8;&#xB294; &#xBCC0;&#xACBD; &#xAC00;&#xB2A5; (-p 8080:80 -p 8443:443)</span>
+docker run -d --restart<span class="token operator">=</span>unless-stopped <span class="token punctuation">\</span>
+  -p <span class="token number">80</span>:80 -p <span class="token number">443</span>:443 <span class="token punctuation">\</span>
+  -v /opt/rancher:/var/lib/rancher <span class="token punctuation">\</span>
+  --privileged <span class="token punctuation">\</span>
   rancher/rancher:latest
 </code></pre>
 
@@ -388,7 +388,7 @@ docker run -d --restart=unless-stopped \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"02. Rancher","level":"1.4.2","depth":2,"next":{"title":"03. Gitbook","level":"1.4.3","depth":2,"path":"posts/memos/03_gitbook.md","ref":"posts/memos/03_gitbook.md","articles":[]},"previous":{"title":"01. Zsh","level":"1.4.1","depth":2,"path":"posts/memos/01_zsh.md","ref":"posts/memos/01_zsh.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"highlight":{},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/02_rancher.md","mtime":"2021-07-31T14:06:43.356Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-31T14:06:47.145Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"02. Rancher","level":"1.4.2","depth":2,"next":{"title":"03. Gitbook","level":"1.4.3","depth":2,"path":"posts/memos/03_gitbook.md","ref":"posts/memos/03_gitbook.md","articles":[]},"previous":{"title":"01. Zsh","level":"1.4.1","depth":2,"path":"posts/memos/01_zsh.md","ref":"posts/memos/01_zsh.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing","-highlight","prism","prism-themes"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-dracula.css"]},"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"prism-themes":{},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/02_rancher.md","mtime":"2021-07-31T14:41:21.976Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-31T14:41:32.108Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
