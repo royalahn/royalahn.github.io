@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>02. Gitbook · Hugh GitBook</title>
+        <title>03. Gitbook · Hugh GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -243,7 +243,7 @@
                 <a href="03_gitbook.html">
             
                     
-                    02. Gitbook
+                    03. Gitbook
             
                 </a>
             
@@ -286,7 +286,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >02. Gitbook</a>
+        <a href="../.." >03. Gitbook</a>
     </h1>
 </div>
 
@@ -301,8 +301,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="gitbook">Gitbook</h1>
-<p><strong>gitbook-cli</strong>&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; <code>gitbook install</code> &#xC2DC; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xC5D0;&#xB7EC; &#xCC98;&#xB9AC; &#xBC29;&#xBC95; (&#xAE30;&#xB85D;&#xC6A9;)</p>
+                                <h2 id="gitbook">Gitbook</h2>
+<h3 id="1-gitbook-cli&#xB97C;-&#xC774;&#xC6A9;&#xD558;&#xC5EC;-gitbook-install-&#xC2DC;-&#xBC1C;&#xC0DD;&#xD558;&#xB294;-&#xC5D0;&#xB7EC;-&#xCC98;&#xB9AC;-&#xBC29;&#xBC95;">1. <strong>gitbook-cli</strong>&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; <code>gitbook install</code> &#xC2DC; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xC5D0;&#xB7EC; &#xCC98;&#xB9AC; &#xBC29;&#xBC95;</h3>
+<p><strong>&#xC5D0;&#xB7EC; &#xB85C;&#xADF8;</strong></p>
 <pre><code class="lang-shell">Installing GitBook 3.2.3
 /usr/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js:287
       if (cb) cb.apply(this, arguments)
@@ -316,18 +317,49 @@ TypeError: cb.apply is not a function
 <blockquote>
 <p>&#xCC38;&#xACE0;: <a href="https://github.com/GitbookIO/gitbook-cli/issues/110" target="_blank">Gitbook build stopped to work in node 12.18.3</a></p>
 </blockquote>
-<h3 id="gitbook-cli&#xB97C;-global&#xB85C;-&#xC124;&#xCE58;&#xD560;-&#xACBD;&#xC6B0;-&#xC124;&#xCE58;-&#xB41C;-&#xACBD;&#xB85C;&#xB85C;-&#xC774;&#xB3D9;">gitbook-cli&#xB97C; global&#xB85C; &#xC124;&#xCE58;&#xD560; &#xACBD;&#xC6B0; &#xC124;&#xCE58; &#xB41C; &#xACBD;&#xB85C;&#xB85C; &#xC774;&#xB3D9;</h3>
+<h4 id="11-gitbook-cli&#xB97C;-global&#xB85C;-&#xC124;&#xCE58;&#xD560;-&#xACBD;&#xC6B0;-&#xC124;&#xCE58;-&#xB41C;-&#xACBD;&#xB85C;&#xB85C;-&#xC774;&#xB3D9;">1.1 gitbook-cli&#xB97C; global&#xB85C; &#xC124;&#xCE58;&#xD560; &#xACBD;&#xC6B0; &#xC124;&#xCE58; &#xB41C; &#xACBD;&#xB85C;&#xB85C; &#xC774;&#xB3D9;</h4>
 <pre><code class="lang-shell"># Linux
 cd /usr/lib/node_modules/gitbook-cli/node_modules/npm
 
 # Windows
 cd C:\Users\&lt;USERNAME&gt;\AppData\Roaming\npm\node_modules\gitbook-cli\node_modules\npm
 </code></pre>
-<h3 id="graceful-fs-414-&#xBC84;&#xC804;&#xC73C;&#xB85C;-&#xC7AC;&#xC124;&#xCE58;">graceful-fs 4.1.4 &#xBC84;&#xC804;&#xC73C;&#xB85C; &#xC7AC;&#xC124;&#xCE58;</h3>
+<h4 id="12-graceful-fs-414-&#xBC84;&#xC804;&#xC73C;&#xB85C;-&#xC7AC;&#xC124;&#xCE58;">1.2 graceful-fs 4.1.4 &#xBC84;&#xC804;&#xC73C;&#xB85C; &#xC7AC;&#xC124;&#xCE58;</h4>
 <pre><code class="lang-shell">npm install graceful-fs@4.1.4
 </code></pre>
-<h3 id="gitbook-&#xD3F4;&#xB354;&#xC5D0;&#xC11C;-gitbook-install-&#xC2E4;&#xD589;">gitbook &#xD3F4;&#xB354;&#xC5D0;&#xC11C; gitbook install &#xC2E4;&#xD589;</h3>
+<h4 id="13-gitbook-project-&#xD3F4;&#xB354;&#xC5D0;&#xC11C;-gitbook-install-&#xC2E4;&#xD589;">1.3 gitbook Project &#xD3F4;&#xB354;&#xC5D0;&#xC11C; gitbook install &#xC2E4;&#xD589;</h4>
 <pre><code class="lang-shell">gitbook install
+</code></pre>
+<h3 id="2-gitbook&#xC758;-build-&#xC0B0;&#xCD9C;&#xBB3C;&#xC744;-gh-pages-branch&#xB85C;-push-&#xD558;&#xB294;-shell-script">2. Gitbook&#xC758; build &#xC0B0;&#xCD9C;&#xBB3C;&#xC744; gh-pages branch&#xB85C; push &#xD558;&#xB294; Shell Script</h3>
+<blockquote>
+<p><strong>gitbook-cli</strong>&#xAC00; &#xC124;&#xCE58;&#xB418;&#xC5B4; &#xC788;&#xC5B4;&#xC57C; &#xD558;&#xBA70;, <code>gh-pages</code> branch&#xAC00; &#xC0DD;&#xC131;&#xB418;&#xC5B4; &#xC788;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.</p>
+</blockquote>
+<pre><code class="lang-shell">#!/bin/bash
+
+# 1. Remove directories
+git worktree remove dist
+rm -rf _book
+rm -rf dist
+
+# 2. Build gitbook
+gitbook install &amp;&amp; gitbook build
+
+# 3. Copy gh-pages branch to dist directory
+git worktree add dist origin/gh-pages -fB gh-pages
+
+# 4.Remove all files except .git and .gitignore
+find ./dist ! -name &quot;.git*&quot; -delete
+
+# 5. Copy gitbook output to dist (gh-pages branch)
+cp -R _book/* dist/
+
+# 6. Checkout gh-pages branch
+cd dist
+
+# 7. Commit and push to origin/gh-pages
+git add .
+git commit -m &quot;Upload gh-pages&quot;
+git push origin gh-pages
 </code></pre>
 
                                 
@@ -368,7 +400,7 @@ cd C:\Users\&lt;USERNAME&gt;\AppData\Roaming\npm\node_modules\gitbook-cli\node_m
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"02. Gitbook","level":"1.4.3","depth":2,"previous":{"title":"02. Rancher","level":"1.4.2","depth":2,"path":"posts/memos/02_rancher.md","ref":"posts/memos/02_rancher.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"highlight":{},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/03_gitbook.md","mtime":"2021-07-31T13:54:44.786Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-31T13:54:51.222Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"03. Gitbook","level":"1.4.3","depth":2,"previous":{"title":"02. Rancher","level":"1.4.2","depth":2,"path":"posts/memos/02_rancher.md","ref":"posts/memos/02_rancher.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"highlight":{},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/03_gitbook.md","mtime":"2021-07-31T14:06:43.356Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-31T14:06:47.145Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
