@@ -9,13 +9,21 @@
     "toggle-chapters",
     "page-toc",
     "copy-code-button",
-    "-sharing"
+    "-sharing",
+    "-highlight",
+    "prism",
+    "prism-themes"
   ],
   "pluginsConfig": {
     "fontsettings": {
       "theme": "white",
       "family": "sans",
       "size": 1
+    },
+    "prism": {
+      "css": [
+        "prism-themes/themes/prism-dracula.css"
+      ]
     }
   }
 }
