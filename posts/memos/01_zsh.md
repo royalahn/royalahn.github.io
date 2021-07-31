@@ -26,7 +26,7 @@ sudo dnf install zsh git
 
 ### 2. oh my zsh 설치
 
-> 참고: [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
+> 참고: [GitHub ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -40,7 +40,7 @@ chsh -s $(which zsh) $USER
 
 ### 3. zsh plugins 설치
 
-> 참고: [zsh-users](https://github.com/zsh-users)
+> 참고: [GitHub zsh-users](https://github.com/zsh-users)
 
 ```shell
 # zsh-syntax-highlighting
