@@ -4,7 +4,7 @@
 
 **에러 로그**
 
-```shell
+```bash
 Installing GitBook 3.2.3
 /usr/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js:287
       if (cb) cb.apply(this, arguments)
@@ -21,7 +21,7 @@ TypeError: cb.apply is not a function
 
 #### 1.1 gitbook-cli를 global로 설치할 경우 설치 된 경로로 이동
 
-```shell
+```bash
 # Linux
 cd /usr/lib/node_modules/gitbook-cli/node_modules/npm
 
@@ -31,13 +31,13 @@ cd C:\Users\<USERNAME>\AppData\Roaming\npm\node_modules\gitbook-cli\node_modules
 
 #### 1.2 graceful-fs 4.1.4 버전으로 재설치
 
-```shell
+```bash
 npm install graceful-fs@4.1.4
 ```
 
 #### 1.3 gitbook Project 폴더에서 gitbook install 실행
 
-```shell
+```bash
 gitbook install
 ```
 
@@ -45,7 +45,7 @@ gitbook install
 
 > **gitbook-cli**가 설치되어 있어야 하며, `gh-pages` branch가 생성되어 있어야 한다.
 
-```shell
+```bash
 #!/bin/bash
 
 # 1. Remove directories

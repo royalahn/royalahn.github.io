@@ -12,12 +12,12 @@ Docker는 설치하는 방법은 정말 다양하다.
 
 > 참고: [GitHub rancher/install-docker](https://github.com/rancher/install-docker)
 
-```shell
+```bash
 # Docker 20.10 (추천)
 curl https://releases.rancher.com/install-docker/20.10.sh | sh
 ```
 
-```shell
+```bash
 # Docker 19.03
 curl https://releases.rancher.com/install-docker/19.03.sh | sh
 ```
@@ -36,11 +36,11 @@ curl https://releases.rancher.com/install-docker/19.03.sh | sh
 
 > 아쉽게도 2021-07-31 현재 Oracle Linux 8.4 arm64에서는 동작하지 않는거 같음.
 
-```shell
+```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
 ```
 
-```shell
+```bash
 sudo sh get-docker.sh
 ```
 
@@ -50,7 +50,7 @@ sudo sh get-docker.sh
 
 > 참고: [Advanced Options for Docker Installs](https://rancher.com/docs/rancher/v2.5/en/installation/other-installation-methods/single-node-docker/advanced/)
 
-```shell
+```bash
 # 포트는 변경 가능 (-p 8080:80 -p 8443:443)
 docker run -d --restart=unless-stopped \
   -p 80:80 -p 443:443 \
