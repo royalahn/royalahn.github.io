@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>🐣 Tips · Hugh GitBook</title>
+        <title>01. Zsh · Hugh GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="01_zsh.html" />
+    <link rel="next" href="02_rancher.html" />
     
     
-    <link rel="prev" href="../bookmarks/02_github-page.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -200,12 +200,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="./">
             
                 <a href="./">
             
                     
-                    🐣 Tips
+                    🐣 Memos
             
                 </a>
             
@@ -214,7 +214,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="01_zsh.html">
+        <li class="chapter active" data-level="1.4.1" data-path="01_zsh.html">
             
                 <a href="01_zsh.html">
             
@@ -288,7 +288,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >🐣 Tips</a>
+        <a href="../.." >01. Zsh</a>
     </h1>
 </div>
 
@@ -303,8 +303,74 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="tips">Tips</h1>
-<p>&#xC720;&#xC6A9;&#xD55C; &#xD301;&#xB4E4;&#xC744; &#xC815;&#xB9AC;&#xD574; &#xB450;&#xB294; &#xACF3; &#xC785;&#xB2C8;&#xB2E4;.</p>
+                                <h1 id="zsh">zsh</h1>
+<p>&#xC694;&#xC998; &#xC815;&#xB9D0; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; &#xC788;&#xB294; <code>zsh</code></p>
+<p>&#xD604;&#xC7AC; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; &#xC788;&#xB294; Setting&#xC744; &#xC815;&#xB9AC;&#xD574; &#xBCF8;&#xB2E4;.</p>
+<h3 id="1-zsh-&#xC124;&#xCE58;">1. zsh &#xC124;&#xCE58;</h3>
+<h4 id="11-ubuntu">1.1 Ubuntu</h4>
+<pre><code class="lang-shell">sudo apt install zsh git
+</code></pre>
+<h4 id="12-centos--oracle-linux">1.2 CentOS / Oracle Linux</h4>
+<pre><code class="lang-shell"># yum&#xC744; &#xC774;&#xC6A9;&#xD55C; &#xBC29;&#xBC95;
+sudo yum install zsh git
+</code></pre>
+<pre><code class="lang-shell"># dnf&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xBC29;&#xBC95;
+sudo dnf install zsh git
+</code></pre>
+<h3 id="2-oh-my-zsh-&#xC124;&#xCE58;">2. oh my zsh &#xC124;&#xCE58;</h3>
+<blockquote>
+<p>&#xCC38;&#xACE0;: <a href="https://github.com/ohmyzsh/ohmyzsh" target="_blank">GitHub ohmyzsh/ohmyzsh</a></p>
+</blockquote>
+<pre><code class="lang-shell">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;
+</code></pre>
+<h4 id="21-&#xC0AC;&#xC6A9;&#xC790;-&#xAE30;&#xBCF8;-shell-&#xBCC0;&#xACBD;">2.1 &#xC0AC;&#xC6A9;&#xC790; &#xAE30;&#xBCF8; Shell &#xBCC0;&#xACBD;</h4>
+<pre><code class="lang-shell">chsh -s $(which zsh) $USER
+</code></pre>
+<h3 id="3-zsh-plugins-&#xC124;&#xCE58;">3. zsh plugins &#xC124;&#xCE58;</h3>
+<blockquote>
+<p>&#xCC38;&#xACE0;: <a href="https://github.com/zsh-users" target="_blank">GitHub zsh-users</a></p>
+</blockquote>
+<pre><code class="lang-shell"># zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+</code></pre>
+<pre><code class="lang-shell"># zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+</code></pre>
+<pre><code class="lang-shell"># zsh-completions
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+</code></pre>
+<h4 id="31-&#xC124;&#xCE58;&#xD55C;-plugins-&#xC0AC;&#xC6A9;&#xD558;&#xAE30;">3.1 &#xC124;&#xCE58;&#xD55C; plugins &#xC0AC;&#xC6A9;&#xD558;&#xAE30;</h4>
+<pre><code class="lang-shell">vi ~/.zshrc
+</code></pre>
+<pre><code class="lang-shell"># &#xC544;&#xB798; &#xBD80;&#xBD84;&#xC744; &#xCC3E;&#xC544;&#xC11C; &#xBCC0;&#xACBD;
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-completions)
+</code></pre>
+<pre><code class="lang-shell">source ~/.zshrc
+</code></pre>
+<h3 id="4-oh-my-zsh-theme-&#xBCC0;&#xACBD;">4. oh my zsh Theme &#xBCC0;&#xACBD;</h3>
+<pre><code class="lang-shell">vi ~/.zshrc
+</code></pre>
+<pre><code class="lang-shell"># &#xC544;&#xB798; &#xBD80;&#xBD84;&#xC744; &#xCC3E;&#xC544;&#xC11C; &#xBCC0;&#xACBD;
+ZSH_THEME=&quot;agnoster&quot;
+</code></pre>
+<pre><code class="lang-shell">source ~/.zshrc
+</code></pre>
+<h4 id="41-promptcontext-&#xBCC0;&#xACBD;">4.1 prompt_context &#xBCC0;&#xACBD;</h4>
+<pre><code class="lang-shell">echo &apos;prompt_context() {}&apos; &gt;&gt; ~/.zshrc
+</code></pre>
+<p>&#xC744; &#xD558;&#xAC70;&#xB098;,</p>
+<pre><code class="lang-shell">vi .oh-my-zsh/themes/agnoster.zsh-theme
+</code></pre>
+<pre><code class="lang-shell"># Context: user@hostname (who am I and where am I)
+prompt_context() {
+  if [[ &quot;$USERNAME&quot; != &quot;$DEFAULT_USER&quot; || -n &quot;$SSH_CLIENT&quot; ]]; then
+    prompt_segment black default &quot;%(!.%{ %F{yellow}% }.)%n@%m&quot;
+  fi
+}
+</code></pre>
+<p>&#xC5D0;&#xC11C; &#xC6D0;&#xD558;&#xB294; &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xBCC0;&#xACBD; (<code>user</code>&#xB9CC; &#xB098;&#xC624;&#xAC8C;)</p>
+<pre><code class="lang-shell">ex) prompt_segment black default &quot;%(!.%{ %F{yellow}% }.)%n&quot;
+</code></pre>
 
                                 
                                 </section>
@@ -332,12 +398,12 @@
 
             
                 
-                <a href="../bookmarks/02_github-page.html" class="navigation navigation-prev " aria-label="Previous page: 02. GitHub Pages">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 🐣 Memos">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="01_zsh.html" class="navigation navigation-next " aria-label="Next page: 01. Zsh">
+                <a href="02_rancher.html" class="navigation navigation-next " aria-label="Next page: 02. Rancher">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -348,7 +414,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"🐣 Tips","level":"1.4","depth":1,"next":{"title":"01. Zsh","level":"1.4.1","depth":2,"path":"posts/tips/01_zsh.md","ref":"posts/tips/01_zsh.md","articles":[]},"previous":{"title":"02. GitHub Pages","level":"1.3.2","depth":2,"path":"posts/bookmarks/02_github-page.md","ref":"posts/bookmarks/02_github-page.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"highlight":{},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/tips/README.md","mtime":"2021-07-31T11:55:41.014Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-31T13:47:51.693Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"01. Zsh","level":"1.4.1","depth":2,"next":{"title":"02. Rancher","level":"1.4.2","depth":2,"path":"posts/memos/02_rancher.md","ref":"posts/memos/02_rancher.md","articles":[]},"previous":{"title":"🐣 Memos","level":"1.4","depth":1,"path":"posts/memos/README.md","ref":"posts/memos/README.md","articles":[{"title":"01. Zsh","level":"1.4.1","depth":2,"path":"posts/memos/01_zsh.md","ref":"posts/memos/01_zsh.md","articles":[]},{"title":"02. Rancher","level":"1.4.2","depth":2,"path":"posts/memos/02_rancher.md","ref":"posts/memos/02_rancher.md","articles":[]},{"title":"02. Gitbook","level":"1.4.3","depth":2,"path":"posts/memos/03_gitbook.md","ref":"posts/memos/03_gitbook.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"highlight":{},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/01_zsh.md","mtime":"2021-07-31T13:54:44.786Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-31T13:54:51.222Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
