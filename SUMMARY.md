@@ -10,4 +10,4 @@
 * [🐣 Memos](posts/memos/README.md)
     * [01. Zsh](posts/memos/01_zsh.md)
     * [02. Rancher](posts/memos/02_rancher.md)
-    * [02. Gitbook](posts/memos/03_gitbook.md)
+    * [03. Gitbook](posts/memos/03_gitbook.md)
