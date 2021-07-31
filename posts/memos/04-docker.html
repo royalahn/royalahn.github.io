@@ -1,0 +1,447 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>04. Docker · Hugh GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-dracula.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../assets/css/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="03-gitbook.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    🐇 Home
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    🐣 Memos
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01-zsh.html">
+            
+                <a href="01-zsh.html">
+            
+                    
+                    01. Zsh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02-rancher.html">
+            
+                <a href="02-rancher.html">
+            
+                    
+                    02. Rancher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03-gitbook.html">
+            
+                <a href="03-gitbook.html">
+            
+                    
+                    03. Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="04-docker.html">
+            
+                <a href="04-docker.html">
+            
+                    
+                    04. Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >04. Docker</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="docker">Docker</h2>
+<p>&#xC694;&#xC998; Systemd &#xB300;&#xC2E0; Docker&#xB97C; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xB370;, &#xC790;&#xC8FC; &#xC0AC;&#xC6A9;&#xD558;&#xB294; commands&#xB97C; &#xC815;&#xB9AC;&#xD574;&#xBCF8;&#xB2E4;.</p>
+<blockquote>
+<p>Docker Hub&#xC5D0; &#xB4F1;&#xB85D;&#xD560; Tag &#xBC84;&#xC804;&#xBA85;&#xC744; &#xD658;&#xACBD;&#xBCC0;&#xC218;&#xB85C; &#xB4F1;&#xB85D;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;</p>
+</blockquote>
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">echo</span> <span class="token string">&quot;export file_manager_version=2.0.1&quot;</span> <span class="token operator">&gt;&gt;</span> ~/.zshrc
+
+<span class="token comment"># &#xC801;&#xC6A9;</span>
+<span class="token builtin class-name">source</span> ~/.zshrc
+
+<span class="token comment"># &#xD655;&#xC778;</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${file_manager_version}</span>
+</code></pre>
+<h3 id="1-dockerfile">1. Dockerfile</h3>
+<blockquote>
+<p>&#xCC38;&#xACE0;: <a href="https://spring.io/guides/gs/spring-boot-docker/" target="_blank">Spring Boot with Docker</a></p>
+<p>Springboot &#xAE30;&#xC900; Dockerfile</p>
+</blockquote>
+<p><strong>&#xD14C;&#xC2A4;&#xD2B8; &#xBC84;&#xC804; &#xCC38;&#xACE0;</strong></p>
+<p><img src="https://img.shields.io/badge/Java-11-23B300.svg?style=plastic&amp;logo=java&amp;logoColor=white" alt="Java"> <img src="https://img.shields.io/badge/SpringBoot-2.3.3-0b90a8.svg?style=plastic&amp;logo=springboot&amp;logoColor=white" alt="SpringBoot"> <img src="https://img.shields.io/badge/Gradle-6.4.1-blue.svg?style=plastic&amp;logo=gradle&amp;logoColor=white" alt="Gradle"></p>
+<pre class="language-"><code class="lang-bash">FROM azul/zulu-openjdk:11
+
+ENV <span class="token assign-left variable">TZ</span><span class="token operator">=</span>Asia/Seoul
+ARG <span class="token assign-left variable">JAR_FILE</span><span class="token operator">=</span>build/libs/*.jar
+
+<span class="token comment"># Set Timezone</span>
+RUN <span class="token function">ln</span> -snf /usr/share/zoneinfo/<span class="token variable">$TZ</span> /etc/localtime <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">echo</span> <span class="token variable">${TZ}</span> <span class="token operator">&gt;</span> /etc/timezone
+
+<span class="token comment"># Container Volume</span>
+VOLUME <span class="token punctuation">[</span><span class="token string">&quot;/opt/hugh&quot;</span><span class="token punctuation">]</span>
+
+<span class="token comment"># Port</span>
+EXPOSE <span class="token number">8080</span>
+
+<span class="token comment"># Copy jar file to the container</span>
+COPY <span class="token variable">${JAR_FILE}</span> app.jar
+
+<span class="token comment"># Run Application</span>
+ENTRYPOINT <span class="token punctuation">[</span><span class="token string">&quot;java&quot;</span>,<span class="token string">&quot;-jar&quot;</span>,<span class="token string">&quot;/app.jar&quot;</span><span class="token punctuation">]</span>
+</code></pre>
+<h3 id="2-docker-build">2. Docker Build</h3>
+<blockquote>
+<p>Docker build&#xB97C; &#xD558;&#xAE30; &#xC804;&#xC5D0; Springboot&#xC758; Gradle build&#xAC00; &#xC120;&#xD589;&#xB418;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p><code>build/libs</code> &#xD3F4;&#xB354; &#xD558;&#xC704;&#xC5D0; jar &#xD30C;&#xC77C; &#xC874;&#xC7AC; &#xC5EC;&#xBD80; &#xD655;&#xC778;</p>
+</blockquote>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># Dockerfile &#xC774; &#xC704;&#xCE58;&#xD55C; &#xD3F4;&#xB354;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xD574;&#xC57C; &#xD558;&#xBA70; &#xB4A4;&#xC5D0; . &#xC774; &#xD544;&#xC694; (&#xD604;&#xC7AC; &#xACBD;&#xB85C;&#xB97C; &#xC758;&#xBBF8;)</span>
+<span class="token function">sudo</span> docker build -t royalahn/file-manager:<span class="token variable">${file_manager_version}</span> <span class="token builtin class-name">.</span>
+</code></pre>
+<h3 id="3-docker-run">3. Docker Run</h3>
+<blockquote>
+<p><code>user_host</code>, <code>user_username</code>, <code>user_password</code>&#xB294; &#xD658;&#xACBD;&#xBCC0;&#xC218;&#xC774;&#xBA70; &#xC0AC;&#xC804;&#xC5D0; &#xB4F1;&#xB85D;&#xC774; &#xD544;&#xC694;</p>
+</blockquote>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker run -d -p <span class="token number">8080</span>:8080 -v /opt/hugh:/opt/hugh --name file-manager <span class="token punctuation">\</span>
+  -e user.host<span class="token operator">=</span><span class="token variable">${user_host}</span> <span class="token punctuation">\</span>
+  -e user.username<span class="token operator">=</span><span class="token variable">${user_username}</span> <span class="token punctuation">\</span>
+  -e user.password<span class="token operator">=</span><span class="token variable">${user_password}</span> <span class="token punctuation">\</span>
+  royalahn/file-manager:<span class="token variable">${file_manager_version}</span>
+</code></pre>
+<h3 id="4-docker-logs">4. Docker Logs</h3>
+<blockquote>
+<p>Docker run &#xC2DC; -d &#xC635;&#xC158;&#xC744; &#xC8FC;&#xC5B4; detach(Background)&#xB85C; &#xC2E4;&#xD589;&#xD588;&#xC744; &#xB54C; &#xB85C;&#xADF8;&#xB97C; &#xBCF4;&#xB294; &#xBC29;&#xBC95;</p>
+</blockquote>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker logs file-manager
+</code></pre>
+<h3 id="5-docker-exec">5. Docker Exec</h3>
+<blockquote>
+<p>Docker &#xAC00; &#xC2E4;&#xD589;&#xB41C; &#xAC00;&#xC0C1; VM&#xC5D0; &#xC811;&#xC18D;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xBC29;&#xBC95;</p>
+</blockquote>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker <span class="token builtin class-name">exec</span> -it file-manager /bin/bash
+</code></pre>
+<h3 id="6-docker-stop">6. Docker Stop</h3>
+<blockquote>
+<p>Docker&#xB85C; &#xC2E4;&#xD589;&#xC911;&#xC778; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC7A0;&#xC2DC; &#xBA48;&#xCD94;&#xB294; &#xBC29;&#xBC95;</p>
+</blockquote>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker stop file-manager
+
+<span class="token comment"># &#xC804;&#xCCB4;&#xB97C; &#xBA48;&#xCD94;&#xB294; &#xBC29;&#xBC95;</span>
+<span class="token function">sudo</span> docker stop <span class="token variable"><span class="token variable">$(</span>docker <span class="token function">ps</span> -a -q<span class="token variable">)</span></span>
+</code></pre>
+<h3 id="7-docker-remove">7. Docker Remove</h3>
+<blockquote>
+<p>&#xBA48;&#xCDA4;&#xC0C1;&#xD0DC;&#xC758; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC81C;&#xAC70;&#xD558;&#xB294; &#xBC29;&#xBC95;</p>
+</blockquote>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker <span class="token function">rm</span> file-manager
+
+<span class="token comment"># &#xC804;&#xCCB4;&#xB97C; &#xC81C;&#xAC70;&#xD558;&#xB294; &#xBC29;&#xBC95;</span>
+<span class="token function">sudo</span> docker <span class="token function">rm</span> <span class="token variable"><span class="token variable">$(</span>docker <span class="token function">ps</span> -a -q<span class="token variable">)</span></span>
+</code></pre>
+<h3 id="8-docker-remove-images">8. Docker Remove Images</h3>
+<blockquote>
+<p>Docker &#xC774;&#xBBF8;&#xC9C0; &#xC81C;&#xAC70;</p>
+</blockquote>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker rmi royalahn/file-manager:<span class="token variable">${file_manager_version}</span>
+</code></pre>
+<h3 id="9-docker-hub&#xC5D0;-&#xB85C;&#xADF8;&#xC778;">9. Docker Hub&#xC5D0; &#xB85C;&#xADF8;&#xC778;</h3>
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">echo</span> <span class="token string">&quot;export docker_username=royalahn&quot;</span> <span class="token operator">&gt;&gt;</span> ~/.zshrc
+
+<span class="token comment"># &lt;changeit&gt;&#xC744; &#xC2E4;&#xC81C; &#xBE44;&#xBC88;&#xC73C;&#xB85C; &#xBCC0;&#xACBD;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;export docker_password=&lt;changeit&gt;&quot;</span> <span class="token operator">&gt;&gt;</span> ~/.zshrc
+
+<span class="token builtin class-name">echo</span> <span class="token variable">${docker_password}</span> <span class="token operator">|</span> <span class="token function">sudo</span> docker login -u <span class="token variable">${docker_username}</span> --password-stdin
+</code></pre>
+<h3 id="10-docker-tag">10. Docker Tag</h3>
+<blockquote>
+<p><code>2.0.1</code> &#xC758; Tag&#xB97C; <code>latest</code>&#xB098; <code>master</code> &#xB4F1;&#xC73C;&#xB85C; &#xBCC0;&#xACBD;</p>
+</blockquote>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker tag royalahn/file-manager:<span class="token variable">${file_manager_version}</span> royalahn/file-manager:master
+<span class="token function">sudo</span> docker tag royalahn/file-manager:<span class="token variable">${file_manager_version}</span> royalahn/file-manager:latest
+</code></pre>
+<h3 id="11-docker-push">11. Docker Push</h3>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker push royalahn/file-manager:<span class="token variable">${file_manager_version}</span>
+</code></pre>
+<h3 id="12-docker-pull">12. Docker Pull</h3>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker pull royalahn/file-manager:<span class="token variable">${file_manager_version}</span>
+<span class="token function">sudo</span> docker pull docker.io/royalahn/file-manager:<span class="token variable">${file_manager_version}</span>
+</code></pre>
+<h3 id="13-docker-service&#xC758;-&#xB85C;&#xADF8;">13. Docker Service&#xC758; &#xB85C;&#xADF8;</h3>
+<blockquote>
+<p>Systemd&#xC5D0; &#xC758;&#xD574; &#xC218;&#xD589;&#xB418;&#xB294; Docker&#xC758; &#xB85C;&#xADF8;</p>
+</blockquote>
+<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">echo</span> <span class="token string">&apos;alias docker-log=&quot;sudo journalctl -xeu docker&quot;&apos;</span> <span class="token operator">&gt;&gt;</span> ~/.zshrc
+
+<span class="token comment"># &#xC218;&#xD589;</span>
+docker-log
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03-gitbook.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 03. Gitbook">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"04. Docker","level":"1.2.4","depth":2,"previous":{"title":"03. Gitbook","level":"1.2.3","depth":2,"path":"posts/memos/03-gitbook.md","ref":"posts/memos/03-gitbook.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing","-highlight","prism","prism-themes"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-dracula.css"]},"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"prism-themes":{},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/04-docker.md","mtime":"2021-07-31T15:21:05.356Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-31T15:21:09.088Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
