@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # 1. Remove directories
+git worktree remove dist
 rm -rf _book
 rm -rf dist
 
