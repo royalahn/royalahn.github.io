@@ -66,6 +66,9 @@ vi ~/.zshrc
 ```bash
 # 아래 부분을 찾아서 변경
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-completions)
+
+# sed를 이용한 변경
+sed -i 's/(git)/(git zsh-autosuggestions zsh-syntax-highlighting zsh-completions)/' ~/.zshrc
 ```
 
 ```bash
@@ -81,6 +84,9 @@ vi ~/.zshrc
 ```bash
 # 아래 부분을 찾아서 변경
 ZSH_THEME="agnoster"
+
+# sed를 이용한 변경
+sed -i 's/robbyrussell/agnoster/' ~/.zshrc
 ```
 
 ```bash
