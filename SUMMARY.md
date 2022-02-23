@@ -6,3 +6,4 @@
     * [02. Rancher](/posts/memos/02-rancher.md)
     * [03. Gitbook](/posts/memos/03-gitbook.md)
     * [04. Docker](/posts/memos/04-docker.md)
+    * [05. Algorithm](/posts/memos/05-algorithm.md)
