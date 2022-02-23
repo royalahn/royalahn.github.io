@@ -2,17 +2,17 @@
   "name": "gitbook",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "gitbook serve",
-    "build": "gitbook build",
     "prebuild": "gitbook install",
-    "upload": "./upload.sh"
+    "build": "gitbook build",
+    "predeploy": "gitbook install && gitbook build",
+    "deploy": "gh-pages -d _book"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Hugh Ahn",
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "prettier": "2.3.2"
   }
 }
