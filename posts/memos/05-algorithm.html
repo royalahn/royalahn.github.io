@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>02. Rancher · Hugh GitBook</title>
+        <title>05. Algorithm · Hugh GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="03-gitbook.html" />
     
-    
-    <link rel="prev" href="01-zsh.html" />
+    <link rel="prev" href="04-docker.html" />
     
 
     </head>
@@ -137,7 +135,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="02-rancher.html">
+        <li class="chapter " data-level="1.2.2" data-path="02-rancher.html">
             
                 <a href="02-rancher.html">
             
@@ -176,7 +174,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="05-algorithm.html">
+        <li class="chapter active" data-level="1.2.5" data-path="05-algorithm.html">
             
                 <a href="05-algorithm.html">
             
@@ -224,7 +222,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >02. Rancher</a>
+        <a href="../.." >05. Algorithm</a>
     </h1>
 </div>
 
@@ -239,48 +237,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="rancher">Rancher</h2>
-<p>&#xD68C;&#xC0AC;&#xC5D0;&#xC11C; &#xC815;&#xB9D0; &#xB9CE;&#xC774; &#xADF8;&#xB9AC;&#xACE0; &#xC720;&#xC6A9;&#xD558;&#xAC8C; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; &#xC788;&#xB294; Rancher</p>
-<p>&#xB098;&#xB294; Rancher&#xAC00; &#xC788;&#xC5B4;&#xC11C; &#xC815;&#xB9D0; &#xC88B;&#xB2E4;. &#x1F44D;</p>
-<h3 id="1-docker-&#xC124;&#xCE58;">1. Docker &#xC124;&#xCE58;</h3>
-<p>Docker&#xB294; &#xC124;&#xCE58;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC740; &#xC815;&#xB9D0; &#xB2E4;&#xC591;&#xD558;&#xB2E4;.</p>
-<h4 id="11-rancher&#xC5D0;&#xC11C;-&#xC81C;&#xACF5;&#xD558;&#xB294;-shell-script">1.1 Rancher&#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD558;&#xB294; Shell Script</h4>
-<blockquote>
-<p>&#xCC38;&#xACE0;: <a href="https://github.com/rancher/install-docker" target="_blank">GitHub rancher/install-docker</a></p>
-</blockquote>
-<pre class="language-"><code class="lang-bash"><span class="token comment"># Docker 20.10 (&#xCD94;&#xCC9C;)</span>
-<span class="token function">curl</span> https://releases.rancher.com/install-docker/20.10.sh <span class="token operator">|</span> <span class="token function">sh</span>
-</code></pre>
-<pre class="language-"><code class="lang-bash"><span class="token comment"># Docker 19.03</span>
-<span class="token function">curl</span> https://releases.rancher.com/install-docker/19.03.sh <span class="token operator">|</span> <span class="token function">sh</span>
-</code></pre>
-<h3 id="12-docker&#xC5D0;&#xC11C;-&#xC81C;&#xACF5;&#xD558;&#xB294;-&#xBC29;&#xBC95;">1.2 Docker&#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xBC29;&#xBC95;</h3>
-<blockquote>
-<p>&#xCC38;&#xACE0;: <a href="https://docs.docker.com/engine/install/centos/" target="_blank">Install Docker Engine on CentOS</a></p>
-<p>&#xCC38;&#xACE0;: <a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank">Install Docker Engine on Ubuntu</a></p>
-</blockquote>
-<p>&#xC704;&#xC5D0; &#xB9C1;&#xD06C;&#xB97C; &#xCC38;&#xACE0;&#xD558;&#xBA74; &#xB428;.</p>
-<h3 id="13-docker&#xC5D0;&#xC11C;-&#xC81C;&#xACF5;&#xD558;&#xB294;-shell-script">1.3 Docker&#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD558;&#xB294; Shell Script</h3>
-<blockquote>
-<p>&#xCC38;&#xACE0;: <a href="https://docs.docker.com/engine/install/centos/" target="_blank">Install Docker Engine on CentOS</a></p>
-<p>&#xC544;&#xC27D;&#xAC8C;&#xB3C4; 2021-07-31 &#xD604;&#xC7AC; Oracle Linux 8.4 arm64&#xC5D0;&#xC11C;&#xB294; &#xB3D9;&#xC791;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xAC70; &#xAC19;&#xC74C;.</p>
-</blockquote>
-<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> -fsSL https://get.docker.com -o get-docker.sh
-</code></pre>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">sh</span> get-docker.sh
-</code></pre>
-<h3 id="2-rancher-&#xC124;&#xCE58;">2. Rancher &#xC124;&#xCE58;</h3>
-<blockquote>
-<p>&#xCC38;&#xACE0;: <a href="https://rancher.com/docs/rancher/v2.5/en/installation/other-installation-methods/single-node-docker/" target="_blank">Installing Rancher on a Single Node Using Docker</a></p>
-<p>&#xCC38;&#xACE0;: <a href="https://rancher.com/docs/rancher/v2.5/en/installation/other-installation-methods/single-node-docker/advanced/" target="_blank">Advanced Options for Docker Installs</a></p>
-</blockquote>
-<pre class="language-"><code class="lang-bash"><span class="token comment"># &#xD3EC;&#xD2B8;&#xB294; &#xBCC0;&#xACBD; &#xAC00;&#xB2A5; (-p 8080:80 -p 8443:443)</span>
-<span class="token function">docker</span> run -d --restart<span class="token operator">=</span>unless-stopped <span class="token punctuation">\</span>
-  -p <span class="token number">80</span>:80 -p <span class="token number">443</span>:443 <span class="token punctuation">\</span>
-  -v /opt/rancher:/var/lib/rancher <span class="token punctuation">\</span>
-  --privileged <span class="token punctuation">\</span>
-  rancher/rancher:latest
-</code></pre>
+                                <h2 id="algorithm">Algorithm</h2>
+<p>&#xC54C;&#xACE0;&#xB9AC;&#xC998; &#xD559;&#xC2B5; &#xD398;&#xC774;&#xC9C0;</p>
 
                                 
                                 </section>
@@ -308,14 +266,10 @@
 
             
                 
-                <a href="01-zsh.html" class="navigation navigation-prev " aria-label="Previous page: 01. Zsh">
+                <a href="04-docker.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 04. Docker">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="03-gitbook.html" class="navigation navigation-next " aria-label="Next page: 03. Gitbook">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -324,7 +278,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"02. Rancher","level":"1.2.2","depth":2,"next":{"title":"03. Gitbook","level":"1.2.3","depth":2,"path":"posts/memos/03-gitbook.md","ref":"posts/memos/03-gitbook.md","articles":[]},"previous":{"title":"01. Zsh","level":"1.2.1","depth":2,"path":"posts/memos/01-zsh.md","ref":"posts/memos/01-zsh.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing","-highlight","prism","prism-themes"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-dracula.css"]},"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"prism-themes":{},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/02-rancher.md","mtime":"2021-07-31T14:19:45.288Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-23T09:00:15.436Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"05. Algorithm","level":"1.2.5","depth":2,"previous":{"title":"04. Docker","level":"1.2.4","depth":2,"path":"posts/memos/04-docker.md","ref":"posts/memos/04-docker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing","-highlight","prism","prism-themes"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-dracula.css"]},"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"prism-themes":{},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/05-algorithm.md","mtime":"2022-02-23T08:58:23.833Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-23T09:00:15.436Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
