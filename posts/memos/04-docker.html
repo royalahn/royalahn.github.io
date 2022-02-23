@@ -270,13 +270,13 @@ ENTRYPOINT <span class="token punctuation">[</span><span class="token string">&q
 <p><code>build/libs</code> &#xD3F4;&#xB354; &#xD558;&#xC704;&#xC5D0; jar &#xD30C;&#xC77C; &#xC874;&#xC7AC; &#xC5EC;&#xBD80; &#xD655;&#xC778;</p>
 </blockquote>
 <pre class="language-"><code class="lang-bash"><span class="token comment"># Dockerfile &#xC774; &#xC704;&#xCE58;&#xD55C; &#xD3F4;&#xB354;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xD574;&#xC57C; &#xD558;&#xBA70; &#xB4A4;&#xC5D0; . &#xC774; &#xD544;&#xC694; (&#xD604;&#xC7AC; &#xACBD;&#xB85C;&#xB97C; &#xC758;&#xBBF8;)</span>
-<span class="token function">sudo</span> docker build -t royalahn/file-manager:<span class="token variable">${file_manager_version}</span> <span class="token builtin class-name">.</span>
+<span class="token function">sudo</span> <span class="token function">docker</span> build -t royalahn/file-manager:<span class="token variable">${file_manager_version}</span> <span class="token builtin class-name">.</span>
 </code></pre>
 <h3 id="3-docker-run">3. Docker Run</h3>
 <blockquote>
 <p><code>user_host</code>, <code>user_username</code>, <code>user_password</code>&#xB294; &#xD658;&#xACBD;&#xBCC0;&#xC218;&#xC774;&#xBA70; &#xC0AC;&#xC804;&#xC5D0; &#xB4F1;&#xB85D;&#xC774; &#xD544;&#xC694;</p>
 </blockquote>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker run -d -p <span class="token number">8080</span>:8080 -v /opt/hugh:/opt/hugh --name file-manager <span class="token punctuation">\</span>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">docker</span> run -d -p <span class="token number">8080</span>:8080 -v /opt/hugh:/opt/hugh --name file-manager <span class="token punctuation">\</span>
   -e user.host<span class="token operator">=</span><span class="token variable">${user_host}</span> <span class="token punctuation">\</span>
   -e user.username<span class="token operator">=</span><span class="token variable">${user_username}</span> <span class="token punctuation">\</span>
   -e user.password<span class="token operator">=</span><span class="token variable">${user_password}</span> <span class="token punctuation">\</span>
@@ -286,37 +286,37 @@ ENTRYPOINT <span class="token punctuation">[</span><span class="token string">&q
 <blockquote>
 <p>Docker run &#xC2DC; -d &#xC635;&#xC158;&#xC744; &#xC8FC;&#xC5B4; detach(Background)&#xB85C; &#xC2E4;&#xD589;&#xD588;&#xC744; &#xB54C; &#xB85C;&#xADF8;&#xB97C; &#xBCF4;&#xB294; &#xBC29;&#xBC95;</p>
 </blockquote>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker logs file-manager
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">docker</span> logs file-manager
 </code></pre>
 <h3 id="5-docker-exec">5. Docker Exec</h3>
 <blockquote>
 <p>Docker &#xAC00; &#xC2E4;&#xD589;&#xB41C; &#xAC00;&#xC0C1; VM&#xC5D0; &#xC811;&#xC18D;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xBC29;&#xBC95;</p>
 </blockquote>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker <span class="token builtin class-name">exec</span> -it file-manager /bin/bash
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">docker</span> <span class="token builtin class-name">exec</span> -it file-manager /bin/bash
 </code></pre>
 <h3 id="6-docker-stop">6. Docker Stop</h3>
 <blockquote>
 <p>Docker&#xB85C; &#xC2E4;&#xD589;&#xC911;&#xC778; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC7A0;&#xC2DC; &#xBA48;&#xCD94;&#xB294; &#xBC29;&#xBC95;</p>
 </blockquote>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker stop file-manager
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">docker</span> stop file-manager
 
 <span class="token comment"># &#xC804;&#xCCB4;&#xB97C; &#xBA48;&#xCD94;&#xB294; &#xBC29;&#xBC95;</span>
-<span class="token function">sudo</span> docker stop <span class="token variable"><span class="token variable">$(</span>docker <span class="token function">ps</span> -a -q<span class="token variable">)</span></span>
+<span class="token function">sudo</span> <span class="token function">docker</span> stop <span class="token variable"><span class="token variable">$(</span><span class="token function">docker</span> <span class="token function">ps</span> -a -q<span class="token variable">)</span></span>
 </code></pre>
 <h3 id="7-docker-remove">7. Docker Remove</h3>
 <blockquote>
 <p>&#xBA48;&#xCDA4;&#xC0C1;&#xD0DC;&#xC758; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC81C;&#xAC70;&#xD558;&#xB294; &#xBC29;&#xBC95;</p>
 </blockquote>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker <span class="token function">rm</span> file-manager
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">docker</span> <span class="token function">rm</span> file-manager
 
 <span class="token comment"># &#xC804;&#xCCB4;&#xB97C; &#xC81C;&#xAC70;&#xD558;&#xB294; &#xBC29;&#xBC95;</span>
-<span class="token function">sudo</span> docker <span class="token function">rm</span> <span class="token variable"><span class="token variable">$(</span>docker <span class="token function">ps</span> -a -q<span class="token variable">)</span></span>
+<span class="token function">sudo</span> <span class="token function">docker</span> <span class="token function">rm</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">docker</span> <span class="token function">ps</span> -a -q<span class="token variable">)</span></span>
 </code></pre>
 <h3 id="8-docker-remove-images">8. Docker Remove Images</h3>
 <blockquote>
 <p>Docker &#xC774;&#xBBF8;&#xC9C0; &#xC81C;&#xAC70;</p>
 </blockquote>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker rmi royalahn/file-manager:<span class="token variable">${file_manager_version}</span>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">docker</span> rmi royalahn/file-manager:<span class="token variable">${file_manager_version}</span>
 </code></pre>
 <h3 id="9-docker-hub&#xC5D0;-&#xB85C;&#xADF8;&#xC778;">9. Docker Hub&#xC5D0; &#xB85C;&#xADF8;&#xC778;</h3>
 <pre class="language-"><code class="lang-bash"><span class="token builtin class-name">echo</span> <span class="token string">&quot;export docker_username=royalahn&quot;</span> <span class="token operator">&gt;&gt;</span> ~/.zshrc
@@ -324,21 +324,21 @@ ENTRYPOINT <span class="token punctuation">[</span><span class="token string">&q
 <span class="token comment"># &lt;changeit&gt;&#xC744; &#xC2E4;&#xC81C; &#xBE44;&#xBC88;&#xC73C;&#xB85C; &#xBCC0;&#xACBD;</span>
 <span class="token builtin class-name">echo</span> <span class="token string">&quot;export docker_password=&lt;changeit&gt;&quot;</span> <span class="token operator">&gt;&gt;</span> ~/.zshrc
 
-<span class="token builtin class-name">echo</span> <span class="token variable">${docker_password}</span> <span class="token operator">|</span> <span class="token function">sudo</span> docker login -u <span class="token variable">${docker_username}</span> --password-stdin
+<span class="token builtin class-name">echo</span> <span class="token variable">${docker_password}</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">docker</span> login -u <span class="token variable">${docker_username}</span> --password-stdin
 </code></pre>
 <h3 id="10-docker-tag">10. Docker Tag</h3>
 <blockquote>
 <p><code>2.0.1</code> &#xC758; Tag&#xB97C; <code>latest</code>&#xB098; <code>master</code> &#xB4F1;&#xC73C;&#xB85C; &#xBCC0;&#xACBD;</p>
 </blockquote>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker tag royalahn/file-manager:<span class="token variable">${file_manager_version}</span> royalahn/file-manager:master
-<span class="token function">sudo</span> docker tag royalahn/file-manager:<span class="token variable">${file_manager_version}</span> royalahn/file-manager:latest
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">docker</span> tag royalahn/file-manager:<span class="token variable">${file_manager_version}</span> royalahn/file-manager:master
+<span class="token function">sudo</span> <span class="token function">docker</span> tag royalahn/file-manager:<span class="token variable">${file_manager_version}</span> royalahn/file-manager:latest
 </code></pre>
 <h3 id="11-docker-push">11. Docker Push</h3>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker push royalahn/file-manager:<span class="token variable">${file_manager_version}</span>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">docker</span> push royalahn/file-manager:<span class="token variable">${file_manager_version}</span>
 </code></pre>
 <h3 id="12-docker-pull">12. Docker Pull</h3>
-<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> docker pull royalahn/file-manager:<span class="token variable">${file_manager_version}</span>
-<span class="token function">sudo</span> docker pull docker.io/royalahn/file-manager:<span class="token variable">${file_manager_version}</span>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">docker</span> pull royalahn/file-manager:<span class="token variable">${file_manager_version}</span>
+<span class="token function">sudo</span> <span class="token function">docker</span> pull docker.io/royalahn/file-manager:<span class="token variable">${file_manager_version}</span>
 </code></pre>
 <h3 id="13-docker-service&#xC758;-&#xB85C;&#xADF8;">13. Docker Service&#xC758; &#xB85C;&#xADF8;</h3>
 <blockquote>
@@ -388,7 +388,7 @@ docker-log
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"04. Docker","level":"1.2.4","depth":2,"previous":{"title":"03. Gitbook","level":"1.2.3","depth":2,"path":"posts/memos/03-gitbook.md","ref":"posts/memos/03-gitbook.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing","-highlight","prism","prism-themes"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-dracula.css"]},"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"prism-themes":{},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/04-docker.md","mtime":"2021-07-31T15:21:05.356Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-19T14:28:12.923Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"04. Docker","level":"1.2.4","depth":2,"previous":{"title":"03. Gitbook","level":"1.2.3","depth":2,"path":"posts/memos/03-gitbook.md","ref":"posts/memos/03-gitbook.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing","-highlight","prism","prism-themes"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-dracula.css"]},"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"prism-themes":{},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/04-docker.md","mtime":"2021-07-31T15:20:39.229Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-23T08:54:42.934Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
