@@ -1,14 +1,22 @@
 @import 'fonts.css';
 
+body {
+  letter-spacing: 0;
+}
+
 .book.font-family-0 {
-  font-family: 'MaruBuri-Regular', sans-serif;
+  font-family: 'MaruBuri', serif;
 }
 
 .book.font-family-1 {
-  font-family: 'IBMPlexSansKR-Regular', sans-serif;
+  font-family: 'IBMPlexSansKR', sans-serif;
 }
 
 .summary {
   font-family: sans-serif;
   font-size: 13px;
+}
+
+.book.font-size-0 .book-body .page-inner section {
+  font-size: 1.3rem;
 }
