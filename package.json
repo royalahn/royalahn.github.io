@@ -7,7 +7,8 @@
     "prebuild": "gitbook install",
     "build": "gitbook build",
     "predeploy": "gitbook install && gitbook build",
-    "deploy": "gh-pages -d _book"
+    "deploy": "gh-pages -d _book",
+    "prettier": "prettier --write {**/*,*}.{js,html,css,json,md}"
   },
   "keywords": [],
   "author": "Hugh Ahn",
