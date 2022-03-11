@@ -37,6 +37,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -239,30 +243,30 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="zsh">zsh</h2>
+                                <h1 id="zsh">zsh</h1>
 <p>&#xC694;&#xC998; &#xC815;&#xB9D0; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; &#xC788;&#xB294; <code>zsh</code></p>
 <p>&#xD604;&#xC7AC; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; &#xC788;&#xB294; Setting&#xC744; &#xC815;&#xB9AC;&#xD574; &#xBCF8;&#xB2E4;.</p>
-<h3 id="1-zsh-&#xC124;&#xCE58;">1. zsh &#xC124;&#xCE58;</h3>
-<h4 id="11-ubuntu">1.1 Ubuntu</h4>
+<h2 id="1-zsh-&#xC124;&#xCE58;">1. zsh &#xC124;&#xCE58;</h2>
+<h3 id="11-ubuntu">1.1 Ubuntu</h3>
 <pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token function">zsh</span> <span class="token function">git</span>
 </code></pre>
-<h4 id="12-centos--oracle-linux">1.2 CentOS / Oracle Linux</h4>
+<h3 id="12-centos--oracle-linux">1.2 CentOS / Oracle Linux</h3>
 <pre class="language-"><code class="lang-bash"><span class="token comment"># yum&#xC744; &#xC774;&#xC6A9;&#xD55C; &#xBC29;&#xBC95;</span>
 <span class="token function">sudo</span> yum <span class="token function">install</span> <span class="token function">zsh</span> <span class="token function">git</span>
 </code></pre>
 <pre class="language-"><code class="lang-bash"><span class="token comment"># dnf&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xBC29;&#xBC95;</span>
 <span class="token function">sudo</span> dnf <span class="token function">install</span> <span class="token function">zsh</span> <span class="token function">git</span>
 </code></pre>
-<h3 id="2-oh-my-zsh-&#xC124;&#xCE58;">2. oh my zsh &#xC124;&#xCE58;</h3>
+<h2 id="2-oh-my-zsh-&#xC124;&#xCE58;">2. oh my zsh &#xC124;&#xCE58;</h2>
 <blockquote>
 <p>&#xCC38;&#xACE0;: <a href="https://github.com/ohmyzsh/ohmyzsh" target="_blank">GitHub ohmyzsh/ohmyzsh</a></p>
 </blockquote>
 <pre class="language-"><code class="lang-bash"><span class="token function">sh</span> -c <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span><span class="token function">curl</span> -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="token variable">)</span></span>&quot;</span>
 </code></pre>
-<h4 id="21-&#xC0AC;&#xC6A9;&#xC790;-&#xAE30;&#xBCF8;-shell-&#xBCC0;&#xACBD;">2.1 &#xC0AC;&#xC6A9;&#xC790; &#xAE30;&#xBCF8; Shell &#xBCC0;&#xACBD;</h4>
+<h3 id="21-&#xC0AC;&#xC6A9;&#xC790;-&#xAE30;&#xBCF8;-shell-&#xBCC0;&#xACBD;">2.1 &#xC0AC;&#xC6A9;&#xC790; &#xAE30;&#xBCF8; Shell &#xBCC0;&#xACBD;</h3>
 <pre class="language-"><code class="lang-bash">chsh -s <span class="token variable"><span class="token variable">$(</span><span class="token function">which</span> <span class="token function">zsh</span><span class="token variable">)</span></span> <span class="token environment constant">$USER</span>
 </code></pre>
-<h3 id="3-zsh-plugins-&#xC124;&#xCE58;">3. zsh plugins &#xC124;&#xCE58;</h3>
+<h2 id="3-zsh-plugins-&#xC124;&#xCE58;">3. zsh plugins &#xC124;&#xCE58;</h2>
 <blockquote>
 <p>&#xCC38;&#xACE0;: <a href="https://github.com/zsh-users" target="_blank">GitHub zsh-users</a></p>
 </blockquote>
@@ -275,7 +279,7 @@
 <pre class="language-"><code class="lang-bash"><span class="token comment"># zsh-completions</span>
 <span class="token function">git</span> clone https://github.com/zsh-users/zsh-completions <span class="token variable">${ZSH_CUSTOM<span class="token operator">:=</span>~<span class="token operator">/</span>.oh-my-zsh<span class="token operator">/</span>custom}</span>/plugins/zsh-completions
 </code></pre>
-<h4 id="31-&#xC124;&#xCE58;&#xD55C;-plugins-&#xC0AC;&#xC6A9;&#xD558;&#xAE30;">3.1 &#xC124;&#xCE58;&#xD55C; plugins &#xC0AC;&#xC6A9;&#xD558;&#xAE30;</h4>
+<h3 id="31-&#xC124;&#xCE58;&#xD55C;-plugins-&#xC0AC;&#xC6A9;&#xD558;&#xAE30;">3.1 &#xC124;&#xCE58;&#xD55C; plugins &#xC0AC;&#xC6A9;&#xD558;&#xAE30;</h3>
 <pre class="language-"><code class="lang-bash"><span class="token function">vi</span> ~/.zshrc
 </code></pre>
 <pre class="language-"><code class="lang-bash"><span class="token comment"># &#xC544;&#xB798; &#xBD80;&#xBD84;&#xC744; &#xCC3E;&#xC544;&#xC11C; &#xBCC0;&#xACBD;</span>
@@ -286,7 +290,7 @@
 </code></pre>
 <pre class="language-"><code class="lang-bash"><span class="token builtin class-name">source</span> ~/.zshrc
 </code></pre>
-<h3 id="4-oh-my-zsh-theme-&#xBCC0;&#xACBD;">4. oh my zsh Theme &#xBCC0;&#xACBD;</h3>
+<h2 id="4-oh-my-zsh-theme-&#xBCC0;&#xACBD;">4. oh my zsh Theme &#xBCC0;&#xACBD;</h2>
 <pre class="language-"><code class="lang-bash"><span class="token function">vi</span> ~/.zshrc
 </code></pre>
 <pre class="language-"><code class="lang-bash"><span class="token comment"># &#xC544;&#xB798; &#xBD80;&#xBD84;&#xC744; &#xCC3E;&#xC544;&#xC11C; &#xBCC0;&#xACBD;</span>
@@ -297,7 +301,7 @@
 </code></pre>
 <pre class="language-"><code class="lang-bash"><span class="token builtin class-name">source</span> ~/.zshrc
 </code></pre>
-<h4 id="41-promptcontext-&#xBCC0;&#xACBD;">4.1 prompt_context &#xBCC0;&#xACBD;</h4>
+<h3 id="41-promptcontext-&#xBCC0;&#xACBD;">4.1 prompt_context &#xBCC0;&#xACBD;</h3>
 <pre class="language-"><code class="lang-bash"><span class="token builtin class-name">echo</span> <span class="token string">&apos;prompt_context() {}&apos;</span> <span class="token operator">&gt;&gt;</span> ~/.zshrc
 </code></pre>
 <p>&#xC744; &#xD558;&#xAC70;&#xB098;,</p>
@@ -356,7 +360,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"01. Zsh","level":"1.2.1","depth":2,"next":{"title":"02. Rancher","level":"1.2.2","depth":2,"path":"posts/memos/02-rancher.md","ref":"posts/memos/02-rancher.md","articles":[]},"previous":{"title":"🐣 Memos","level":"1.2","depth":1,"path":"posts/memos/README.md","ref":"posts/memos/README.md","articles":[{"title":"01. Zsh","level":"1.2.1","depth":2,"path":"posts/memos/01-zsh.md","ref":"posts/memos/01-zsh.md","articles":[]},{"title":"02. Rancher","level":"1.2.2","depth":2,"path":"posts/memos/02-rancher.md","ref":"posts/memos/02-rancher.md","articles":[]},{"title":"03. Gitbook","level":"1.2.3","depth":2,"path":"posts/memos/03-gitbook.md","ref":"posts/memos/03-gitbook.md","articles":[]},{"title":"04. Docker","level":"1.2.4","depth":2,"path":"posts/memos/04-docker.md","ref":"posts/memos/04-docker.md","articles":[]},{"title":"05. Algorithm","level":"1.2.5","depth":2,"path":"posts/memos/05-algorithm.md","ref":"posts/memos/05-algorithm.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing","-highlight","prism","prism-themes"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-dracula.css"]},"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"prism-themes":{},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/01-zsh.md","mtime":"2022-03-05T15:41:06.512Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-05T15:41:45.016Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"01. Zsh","level":"1.2.1","depth":2,"next":{"title":"02. Rancher","level":"1.2.2","depth":2,"path":"posts/memos/02-rancher.md","ref":"posts/memos/02-rancher.md","articles":[]},"previous":{"title":"🐣 Memos","level":"1.2","depth":1,"path":"posts/memos/README.md","ref":"posts/memos/README.md","articles":[{"title":"01. Zsh","level":"1.2.1","depth":2,"path":"posts/memos/01-zsh.md","ref":"posts/memos/01-zsh.md","articles":[]},{"title":"02. Rancher","level":"1.2.2","depth":2,"path":"posts/memos/02-rancher.md","ref":"posts/memos/02-rancher.md","articles":[]},{"title":"03. Gitbook","level":"1.2.3","depth":2,"path":"posts/memos/03-gitbook.md","ref":"posts/memos/03-gitbook.md","articles":[]},{"title":"04. Docker","level":"1.2.4","depth":2,"path":"posts/memos/04-docker.md","ref":"posts/memos/04-docker.md","articles":[]},{"title":"05. Algorithm","level":"1.2.5","depth":2,"path":"posts/memos/05-algorithm.md","ref":"posts/memos/05-algorithm.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","toggle-chapters","page-toc","copy-code-button","-sharing","-highlight","prism","prism-themes","flexible-alerts","livereload"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-dracula.css"]},"livereload":{},"splitter":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":1},"prism-themes":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/01-zsh.md","mtime":"2022-03-11T14:24:19.996Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-11T14:26:04.654Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -387,6 +391,14 @@
     
         
         <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

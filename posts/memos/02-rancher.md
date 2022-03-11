@@ -1,14 +1,14 @@
-## Rancher
+# Rancher
 
 회사에서 정말 많이 그리고 유용하게 사용하고 있는 Rancher
 
 나는 Rancher가 있어서 정말 좋다. 👍
 
-### 1. Docker 설치
+## 1. Docker 설치
 
 Docker는 설치하는 방법은 정말 다양하다.
 
-#### 1.1 Rancher에서 제공하는 Shell Script
+### 1.1 Rancher에서 제공하는 Shell Script
 
 > 참고: [GitHub rancher/install-docker](https://github.com/rancher/install-docker)
 
@@ -44,7 +44,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-### 2. Rancher 설치
+## 2. Rancher 설치
 
 > 참고: [Installing Rancher on a Single Node Using Docker](https://rancher.com/docs/rancher/v2.5/en/installation/other-installation-methods/single-node-docker/)
 
