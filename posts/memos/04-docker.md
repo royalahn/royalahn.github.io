@@ -1,4 +1,4 @@
-## Docker
+# Docker
 
 요즘 Systemd 대신 Docker를 많이 사용하는데, 자주 사용하는 commands를 정리해본다.
 
@@ -14,7 +14,7 @@ source ~/.zshrc
 echo ${file_manager_version}
 ```
 
-### 1. Dockerfile
+## 1. Dockerfile
 
 > 참고: [Spring Boot with Docker](https://spring.io/guides/gs/spring-boot-docker/)
 
@@ -46,7 +46,7 @@ COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
 ```
 
-### 2. Docker Build
+## 2. Docker Build
 
 > Docker build를 하기 전에 Springboot의 Gradle build가 선행되어야 한다.
 
@@ -57,7 +57,7 @@ ENTRYPOINT ["java","-jar","/app.jar"]
 sudo docker build -t royalahn/file-manager:${file_manager_version} .
 ```
 
-### 3. Docker Run
+## 3. Docker Run
 
 > `user_host`, `user_username`, `user_password`는 환경변수이며 사전에 등록이 필요
 
@@ -69,7 +69,7 @@ sudo docker run -d -p 8080:8080 -v /opt/hugh:/opt/hugh --name file-manager \
   royalahn/file-manager:${file_manager_version}
 ```
 
-### 4. Docker Logs
+## 4. Docker Logs
 
 > Docker run 시 -d 옵션을 주어 detach(Background)로 실행했을 때 로그를 보는 방법
 
@@ -77,7 +77,7 @@ sudo docker run -d -p 8080:8080 -v /opt/hugh:/opt/hugh --name file-manager \
 sudo docker logs file-manager
 ```
 
-### 5. Docker Exec
+## 5. Docker Exec
 
 > Docker 가 실행된 가상 VM에 접속하기 위한 방법
 
@@ -85,7 +85,7 @@ sudo docker logs file-manager
 sudo docker exec -it file-manager /bin/bash
 ```
 
-### 6. Docker Stop
+## 6. Docker Stop
 
 > Docker로 실행중인 서비스를 잠시 멈추는 방법
 
@@ -96,7 +96,7 @@ sudo docker stop file-manager
 sudo docker stop $(docker ps -a -q)
 ```
 
-### 7. Docker Remove
+## 7. Docker Remove
 
 > 멈춤상태의 서비스를 제거하는 방법
 
@@ -107,7 +107,7 @@ sudo docker rm file-manager
 sudo docker rm $(docker ps -a -q)
 ```
 
-### 8. Docker Remove Images
+## 8. Docker Remove Images
 
 > Docker 이미지 제거
 
@@ -115,7 +115,7 @@ sudo docker rm $(docker ps -a -q)
 sudo docker rmi royalahn/file-manager:${file_manager_version}
 ```
 
-### 9. Docker Hub에 로그인
+## 9. Docker Hub에 로그인
 
 ```bash
 echo "export docker_username=royalahn" >> ~/.zshrc
@@ -126,7 +126,7 @@ echo "export docker_password=<changeit>" >> ~/.zshrc
 echo ${docker_password} | sudo docker login -u ${docker_username} --password-stdin
 ```
 
-### 10. Docker Tag
+## 10. Docker Tag
 
 > `2.0.1` 의 Tag를 `latest`나 `master` 등으로 변경
 
@@ -135,20 +135,20 @@ sudo docker tag royalahn/file-manager:${file_manager_version} royalahn/file-mana
 sudo docker tag royalahn/file-manager:${file_manager_version} royalahn/file-manager:latest
 ```
 
-### 11. Docker Push
+## 11. Docker Push
 
 ```bash
 sudo docker push royalahn/file-manager:${file_manager_version}
 ```
 
-### 12. Docker Pull
+## 12. Docker Pull
 
 ```bash
 sudo docker pull royalahn/file-manager:${file_manager_version}
 sudo docker pull docker.io/royalahn/file-manager:${file_manager_version}
 ```
 
-### 13. Docker Service의 로그
+## 13. Docker Service의 로그
 
 > Systemd에 의해 수행되는 Docker의 로그
 
