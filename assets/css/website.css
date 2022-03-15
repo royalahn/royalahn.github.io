@@ -9,14 +9,32 @@ body {
 }
 
 .book.font-family-1 {
-  font-family: 'IBMPlexSansKR', sans-serif;
+  font-family: 'Quicksand', 'IBMPlexSansKR', sans-serif;
 }
 
 .summary {
-  font-family: sans-serif;
+  font-family: 'Quicksand', 'IBMPlexSansKR', sans-serif;
   font-size: 13px;
 }
 
 .book.font-size-0 .book-body .page-inner section {
   font-size: 1.3rem;
+}
+
+.markdown-section code,
+.markdown-section pre {
+  font-family: Monaco, Consolas, monospace;
+}
+
+#book-search-input {
+  font-family: 'Quicksand', 'IBMPlexSansKR', sans-serif;
+}
+
+li > a.gitbook-link {
+  display: none !important;
+}
+
+.markdown-section hr {
+  height: 1px;
+  background-color: #e0e0e0;
 }
