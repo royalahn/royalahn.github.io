@@ -1,8 +1,10 @@
+/* prettier-ignore */
 @font-face {
   font-family: 'IBMPlexSansKR';
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/IBMPlexSansKR-Regular.woff') format('woff');
+  src: url('../fonts/IBMPlexSansKR-Regular.woff2') format('woff2'),                     /* Super Modern Browsers */
+       url('../fonts/IBMPlexSansKR-Regular.woff') format('woff');                       /* Modern Browsers */
 }
 
 /* prettier-ignore */
@@ -10,13 +12,13 @@
   font-family: 'Monaco';
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/Monaco-Regular.eot');
+  src: url('../fonts/Monaco-Regular.eot');                                              /* IE9 Compat Modes */
   src: local(''),
-       url('../fonts/Monaco-Regular.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Monaco-Regular.woff2') format('woff2'),
-       url('../fonts/Monaco-Regular.woff') format('woff'),
-       url('../fonts/Monaco-Regular.ttf') format('truetype'),
-       url('../fonts/Monaco-Regular.svg#Monaco') format('svg');
+       url('../fonts/Monaco-Regular.eot?#iefix') format('embedded-opentype'),           /* IE6-IE8 */
+       url('../fonts/Monaco-Regular.woff2') format('woff2'),                            /* Super Modern Browsers */
+       url('../fonts/Monaco-Regular.woff') format('woff'),                              /* Modern Browsers */
+       url('../fonts/Monaco-Regular.ttf') format('truetype'),                           /* Safari, Android, iOS */
+       url('../fonts/Monaco-Regular.svg#Monaco') format('svg');                         /* Legacy iOS */
 }
 
 /* prettier-ignore */
