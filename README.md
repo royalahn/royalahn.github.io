@@ -1,6 +1,6 @@
 # Hugh GitBook
 
-![Author](https://img.shields.io/badge/Author-Hugh_Ahn-blue.svg?style=plastic&logo=ActiGraph&logoColor=white) [![Version](https://img.shields.io/github/v/release/royalahn/royalahn.github.io?display_name=tag&label=Release&color=success&style=plastic&logo=SemVer&logoColor=white)](https://github.com/royalahn/royalahn.github.io/releases) ![Created](https://img.shields.io/badge/Created_Date-2021--07--08-red.svg?style=plastic&logo=Coursera&logoColor=white)
+![Author](https://img.shields.io/badge/Author-Hugh_Ahn-lightgray.svg?style=plastic&logo=ActiGraph&logoColor=white) [![Version](https://img.shields.io/github/v/release/royalahn/royalahn.github.io?display_name=tag&label=Release&style=plastic&logo=SemVer&logoColor=white)](https://github.com/royalahn/royalahn.github.io/releases) ![Updated](https://img.shields.io/github/last-commit/royalahn/royalahn.github.io/main?label=Last%20Updated&style=plastic&logo=Coursera&logoColor=white)
 
 ![home-image](assets/images/home.png)
 
