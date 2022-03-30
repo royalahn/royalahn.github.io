@@ -7,4 +7,4 @@
 > [!NOTE]
 > 반갑습니다. Hugh GitBook에 오신것을 환영합니다 :)
 >
-> `gitbook-cli` 로 Deploy 되었어요
+> `gitbook-cli` 로 Deploy 되었어요.
