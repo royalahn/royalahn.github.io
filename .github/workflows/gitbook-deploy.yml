@@ -25,10 +25,7 @@ jobs:
       - name: Setup gitbook-cli
         run: |
           npm install -g gitbook-cli
-
-          gitbook init
-
-          cd /usr/local/lib/node_modules/gitbook-cli/node_modules/npm
+          cd $(npm root -g)/gitbook-cli/node_modules/npm
           npm install graceful-fs@4.1.4
 
       - name: Deploy gitbook
