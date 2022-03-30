@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          cache: npm
 
       - name: Setup gitbook-cli
         run: |
@@ -28,11 +28,13 @@ jobs:
           cd $(npm root -g)/gitbook-cli/node_modules/npm
           npm install graceful-fs@4.1.4
 
+      - name: Build gitbook
+        run: npm run predeploy
+
       - name: Deploy gitbook
-        run: |
-
-          git config --global user.email "royalahn@gmail.com"
-          git config --global user.name "Hugh Ahn"
-
-          npm install
-          npm run deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_book
+          user_name: GitHub Actions
+          user_email: royalahn@gmail.com
