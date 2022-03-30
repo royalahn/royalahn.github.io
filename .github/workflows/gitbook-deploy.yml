@@ -1,0 +1,40 @@
+name: Deploy GitBook based on GitHub Actions
+
+on:
+  push:
+    branches: [main, task/github-actions]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - name: Setup gitbook-cli
+        run: |
+          npm install -g gitbook-cli
+          cd $(npm root -g)/gitbook-cli/node_modules/npm
+          npm install graceful-fs@4.1.4
+
+      - name: Build gitbook
+        run: npm run predeploy
+
+      - name: Deploy gitbook
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_book
+          user_name: GitHub Actions
+          user_email: royalahn@gmail.com
