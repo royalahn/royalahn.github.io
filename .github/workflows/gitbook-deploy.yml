@@ -30,5 +30,9 @@ jobs:
 
       - name: Deploy gitbook
         run: |
+
+          git config --global user.email "royalahn@gmail.com"
+          git config --global user.name "Hugh Ahn"
+
           npm install
           npm run deploy
