@@ -39,10 +39,10 @@
       "label": "Contents"
     },
 
-    "favicon": "assets/images/heart.svg",
+    "favicon": "assets/images/book.png",
 
     "insert-logo": {
-      "url": "https://royalahn.github.io/assets/images/heart.svg",
+      "url": "https://royalahn.github.io/assets/images/logo.png",
       "style": "background: none; height: 40px;"
     }
   }
