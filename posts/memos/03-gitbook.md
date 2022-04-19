@@ -17,13 +17,14 @@ TypeError: cb.apply is not a function
 
 `gitbook install` 시 dependency가 있는 **graceful-fs** 의 버전이 `4.1.11`으로 호환성 문제가 존재하여 `4.1.4`로 downgrade를 해줘야 한다.
 
+> [!TIP]
 > 참고: [Gitbook build stopped to work in node 12.18.3](https://github.com/GitbookIO/gitbook-cli/issues/110)
 
 ### 1.1 gitbook-cli를 global로 설치할 경우 설치 된 경로로 이동
 
 ```bash
 # Linux
-cd /usr/lib/node_modules/gitbook-cli/node_modules/npm
+cd $(npm root -g)/gitbook-cli/node_modules/npm
 
 # Windows
 cd C:\Users\<USERNAME>\AppData\Roaming\npm\node_modules\gitbook-cli\node_modules\npm
@@ -43,6 +44,7 @@ gitbook install
 
 ## 2. Gitbook의 build 산출물을 gh-pages branch로 push 하는 Shell Script
 
+> [!NOTE]
 > **gitbook-cli**가 설치되어 있어야 하며, `gh-pages` branch가 생성되어 있어야 한다.
 
 ```bash
