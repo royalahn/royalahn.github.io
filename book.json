@@ -46,7 +46,7 @@
     },
 
     "logo": {
-      "logo": "assets/images/logo.png",
+      "logo": "/assets/images/logo.png",
       "logoStyle": "height: 40px;",
       "url": "https://royalahn.github.io"
     }
