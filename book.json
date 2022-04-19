@@ -1,31 +1,49 @@
 {
   "title": "Hugh GitBook",
+
   "styles": {
     "website": "assets/css/website.css"
   },
+
   "plugins": [
     "splitter",
-    "expandable-chapters-small",
-    "toggle-chapters",
-    "page-toc",
-    "copy-code-button",
+    "chapter-fold",
+    "intopic-toc",
+    "code",
     "-sharing",
     "-highlight",
     "prism",
     "prism-themes",
-    "flexible-alerts"
+    "flexible-alerts",
+    "custom-favicon",
+    "back-to-top-button",
+    "insert-logo",
+    "popup",
+    "-lunr",
+    "-search",
+    "search-pro"
   ],
+
   "pluginsConfig": {
     "fontsettings": {
       "theme": "white",
       "family": "sans",
       "size": 1
     },
+
     "prism": {
       "css": ["prism-themes/themes/prism-dracula.css"]
     },
-    "page-toc": {
-      "selector": ".markdown-section h1, .markdown-section h2"
+
+    "intopic-toc": {
+      "label": "Contents"
+    },
+
+    "favicon": "assets/images/heart.svg",
+
+    "insert-logo": {
+      "url": "https://royalahn.github.io/assets/images/heart.svg",
+      "style": "background: none; height: 40px;"
     }
   }
 }
