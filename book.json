@@ -17,8 +17,7 @@
     "flexible-alerts",
     "custom-favicon",
     "back-to-top-button",
-    "insert-logo",
-    "popup",
+    "logo",
     "-lunr",
     "-search",
     "search-pro"
@@ -42,8 +41,14 @@
     "favicon": "assets/images/book.png",
 
     "insert-logo": {
-      "url": "https://royalahn.github.io/assets/images/logo.png",
-      "style": "background: none; height: 40px;"
+      "url": "",
+      "style": "background: none; max-height: 40px;"
+    },
+
+    "logo": {
+      "logo": "assets/images/logo.png",
+      "logoStyle": "height: 40px;",
+      "url": "https://royalahn.github.io"
     }
   }
 }
