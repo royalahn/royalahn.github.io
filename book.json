@@ -20,7 +20,8 @@
     "logo",
     "-lunr",
     "-search",
-    "search-pro"
+    "search-pro",
+    "lightbox"
   ],
 
   "pluginsConfig": {
@@ -49,6 +50,14 @@
       "logo": "/assets/images/logo.png",
       "logoStyle": "height: 40px;",
       "url": "https://royalahn.github.io"
+    },
+
+    "lightbox": {
+      "includeJQuery": false,
+      "sameUuid": true,
+      "options": {
+        "resizeDuration": 200
+      }
     }
   }
 }
