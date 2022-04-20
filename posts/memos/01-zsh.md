@@ -26,6 +26,7 @@ sudo dnf install zsh git
 
 ## 2. oh my zsh 설치
 
+> [!TIP]
 > 참고: [GitHub ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 
 ```bash
@@ -40,21 +41,22 @@ chsh -s $(which zsh) $USER
 
 ## 3. zsh plugins 설치
 
+> [!TIP]
 > 참고: [GitHub zsh-users](https://github.com/zsh-users)
 
 ```bash
 # zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting --depth 1
 ```
 
 ```bash
 # zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions --depth 1
 ```
 
 ```bash
 # zsh-completions
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions --depth 1
 ```
 
 ### 3.1 설치한 plugins 사용하기
