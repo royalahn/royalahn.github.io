@@ -23,6 +23,8 @@ curl https://releases.rancher.com/install-docker/20.10.sh | sh
 curl https://releases.rancher.com/install-docker/19.03.sh | sh
 ```
 
+<br/>
+
 ### 1.2 Docker에서 제공하는 방법
 
 > [!TIP]
@@ -31,6 +33,8 @@ curl https://releases.rancher.com/install-docker/19.03.sh | sh
 > 참고: [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
 위에 링크를 참고하면 됨.
+
+<br/>
 
 ### 1.3 Docker에서 제공하는 Shell Script
 
@@ -46,6 +50,8 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 ```bash
 sudo sh get-docker.sh
 ```
+
+<br/>
 
 ## 2. Rancher 설치
 
