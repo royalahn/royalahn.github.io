@@ -10,6 +10,7 @@ Docker는 설치하는 방법은 정말 다양하다.
 
 ### 1.1 Rancher에서 제공하는 Shell Script
 
+> [!TIP]
 > 참고: [GitHub rancher/install-docker](https://github.com/rancher/install-docker)
 
 ```bash
@@ -24,16 +25,18 @@ curl https://releases.rancher.com/install-docker/19.03.sh | sh
 
 ### 1.2 Docker에서 제공하는 방법
 
+> [!TIP]
 > 참고: [Install Docker Engine on CentOS](https://docs.docker.com/engine/install/centos/)
-
+>
 > 참고: [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
 위에 링크를 참고하면 됨.
 
 ### 1.3 Docker에서 제공하는 Shell Script
 
+> [!TIP]
 > 참고: [Install Docker Engine on CentOS](https://docs.docker.com/engine/install/centos/)
-
+>
 > 아쉽게도 2021-07-31 현재 Oracle Linux 8.4 arm64에서는 동작하지 않는거 같음.
 
 ```bash
@@ -46,8 +49,9 @@ sudo sh get-docker.sh
 
 ## 2. Rancher 설치
 
+> [!TIP]
 > 참고: [Installing Rancher on a Single Node Using Docker](https://rancher.com/docs/rancher/v2.5/en/installation/other-installation-methods/single-node-docker/)
-
+>
 > 참고: [Advanced Options for Docker Installs](https://rancher.com/docs/rancher/v2.5/en/installation/other-installation-methods/single-node-docker/advanced/)
 
 ```bash
