@@ -12,6 +12,8 @@
 sudo apt install zsh git
 ```
 
+<br/>
+
 ### 1.2 CentOS / Oracle Linux
 
 ```bash
@@ -24,6 +26,8 @@ sudo yum install zsh git
 sudo dnf install zsh git
 ```
 
+<br/>
+
 ## 2. oh my zsh 설치
 
 > [!TIP]
@@ -33,11 +37,15 @@ sudo dnf install zsh git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+<br/>
+
 ### 2.1 사용자 기본 Shell 변경
 
 ```bash
 chsh -s $(which zsh) $USER
 ```
+
+<br/>
 
 ## 3. zsh plugins 설치
 
@@ -59,6 +67,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions --depth 1
 ```
 
+<br/>
+
 ### 3.1 설치한 plugins 사용하기
 
 ```bash
@@ -77,6 +87,8 @@ sed -i 's/(git)/(git zsh-autosuggestions zsh-syntax-highlighting zsh-completions
 source ~/.zshrc
 ```
 
+<br/>
+
 ## 4. oh my zsh Theme 변경
 
 ```bash
@@ -94,6 +106,8 @@ sed -i 's/robbyrussell/agnoster/' ~/.zshrc
 ```bash
 source ~/.zshrc
 ```
+
+<br/>
 
 ### 4.1 prompt_context 변경
 
