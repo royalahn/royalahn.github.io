@@ -20,6 +20,8 @@ TypeError: cb.apply is not a function
 > [!TIP]
 > 참고: [Gitbook build stopped to work in node 12.18.3](https://github.com/GitbookIO/gitbook-cli/issues/110)
 
+<br/>
+
 ### 1.1 gitbook-cli를 global로 설치할 경우 설치 된 경로로 이동
 
 ```bash
@@ -30,17 +32,23 @@ cd $(npm root -g)/gitbook-cli/node_modules/npm
 cd C:\Users\<USERNAME>\AppData\Roaming\npm\node_modules\gitbook-cli\node_modules\npm
 ```
 
+<br/>
+
 ### 1.2 graceful-fs 4.1.4 버전으로 재설치
 
 ```bash
 npm install graceful-fs@4.1.4
 ```
 
+<br/>
+
 ### 1.3 gitbook Project 폴더에서 gitbook install 실행
 
 ```bash
 gitbook install
 ```
+
+<br/>
 
 ## 2. Gitbook의 build 산출물을 gh-pages branch로 push 하는 Shell Script
 
