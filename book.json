@@ -20,8 +20,7 @@
     "logo",
     "-lunr",
     "-search",
-    "search-pro",
-    "lightbox"
+    "search-pro"
   ],
 
   "pluginsConfig": {
@@ -32,7 +31,7 @@
     },
 
     "prism": {
-      "css": ["prism-themes/themes/prism-dracula.css"]
+      "css": ["prism-themes/themes/prism-vsc-dark-plus.css"]
     },
 
     "intopic-toc": {
