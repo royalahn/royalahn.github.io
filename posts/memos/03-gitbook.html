@@ -33,7 +33,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-dracula.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-vsc-dark-plus.css">
                 
             
                 
@@ -46,10 +46,6 @@
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
                 
             
                 
@@ -293,7 +289,7 @@ TypeError: cb.apply is not a <span class="token keyword">function</span>
 <p><br></p>
 <h3 id="11-gitbook-cli&#xB97C;-global&#xB85C;-&#xC124;&#xCE58;&#xD560;-&#xACBD;&#xC6B0;-&#xC124;&#xCE58;-&#xB41C;-&#xACBD;&#xB85C;&#xB85C;-&#xC774;&#xB3D9;">1.1 gitbook-cli&#xB97C; global&#xB85C; &#xC124;&#xCE58;&#xD560; &#xACBD;&#xC6B0; &#xC124;&#xCE58; &#xB41C; &#xACBD;&#xB85C;&#xB85C; &#xC774;&#xB3D9;</h3>
 <pre class="language-"><code class="lang-bash"><span class="token comment"># Linux</span>
-<span class="token builtin class-name">cd</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">npm</span> root -g<span class="token variable">)</span></span>/gitbook-cli/node_modules/npm
+<span class="token builtin class-name">cd</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">npm</span> root <span class="token parameter variable">-g</span><span class="token variable">)</span></span>/gitbook-cli/node_modules/npm
 
 <span class="token comment"># Windows</span>
 <span class="token builtin class-name">cd</span> C:<span class="token punctuation">\</span>Users<span class="token punctuation">\</span><span class="token operator">&lt;</span>USERNAME<span class="token operator">&gt;</span><span class="token punctuation">\</span>AppData<span class="token punctuation">\</span>Roaming<span class="token punctuation">\</span>npm<span class="token punctuation">\</span>node_modules<span class="token punctuation">\</span>gitbook-cli<span class="token punctuation">\</span>node_modules<span class="token punctuation">\</span>npm
@@ -316,30 +312,30 @@ TypeError: cb.apply is not a <span class="token keyword">function</span>
 
 <span class="token comment"># 1. Remove directories</span>
 <span class="token function">git</span> worktree remove dist
-<span class="token function">rm</span> -rf _book
-<span class="token function">rm</span> -rf dist
+<span class="token function">rm</span> <span class="token parameter variable">-rf</span> _book
+<span class="token function">rm</span> <span class="token parameter variable">-rf</span> dist
 
 <span class="token comment"># 2. Build gitbook</span>
 gitbook <span class="token function">install</span> <span class="token operator">&amp;&amp;</span> gitbook build
 
 <span class="token comment"># 3. Copy gh-pages branch to dist directory</span>
-<span class="token function">git</span> worktree <span class="token function">add</span> dist origin/gh-pages -fB gh-pages
+<span class="token function">git</span> worktree <span class="token function">add</span> dist origin/gh-pages <span class="token parameter variable">-fB</span> gh-pages
 
 <span class="token comment"># 4.Remove all files except .git and .gitignore</span>
-<span class="token function">find</span> ./dist <span class="token operator">!</span> -name <span class="token string">&quot;.git*&quot;</span> -delete
+<span class="token function">find</span> ./dist <span class="token operator">!</span> <span class="token parameter variable">-name</span> <span class="token string">&quot;.git*&quot;</span> <span class="token parameter variable">-delete</span>
 
 <span class="token comment"># 5. Copy gitbook output to dist (gh-pages branch)</span>
-<span class="token function">cp</span> -R _book/* dist/
+<span class="token function">cp</span> <span class="token parameter variable">-R</span> _book/* dist/
 
 <span class="token comment"># 6. Checkout gh-pages branch</span>
 <span class="token builtin class-name">cd</span> dist
 
 <span class="token comment"># 7. Commit and push to origin/gh-pages</span>
 <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
-<span class="token function">git</span> commit -m <span class="token string">&quot;Upload gh-pages&quot;</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">&quot;Upload gh-pages&quot;</span>
 <span class="token function">git</span> push origin gh-pages
 </code></pre>
-<script>document.addEventListener("DOMContentLoaded", function() {lightbox.option({"resizeDuration":200});})</script>
+
                                 
                                 </section>
                             
@@ -382,7 +378,7 @@ gitbook <span class="token function">install</span> <span class="token operator"
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"03. Gitbook","level":"1.2.3","depth":2,"next":{"title":"04. Docker","level":"1.2.4","depth":2,"path":"posts/memos/04-docker.md","ref":"posts/memos/04-docker.md","articles":[]},"previous":{"title":"02. Rancher","level":"1.2.2","depth":2,"path":"posts/memos/02-rancher.md","ref":"posts/memos/02-rancher.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","chapter-fold","intopic-toc","code","-sharing","-highlight","prism","prism-themes","flexible-alerts","custom-favicon","back-to-top-button","logo","-lunr","-search","search-pro","lightbox"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-dracula.css"]},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"Contents","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"search-pro":{},"logo":{"logo":"/assets/images/logo.png","logoStyle":"height: 40px;","url":"https://royalahn.github.io"},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":1},"favicon":"assets/images/book.png","lightbox":{"jquery":true,"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":200}},"back-to-top-button":{},"prism-themes":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"","style":"background: none; max-height: 40px;"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/03-gitbook.md","mtime":"2022-04-20T14:11:11.880Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-20T14:12:03.450Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"03. Gitbook","level":"1.2.3","depth":2,"next":{"title":"04. Docker","level":"1.2.4","depth":2,"path":"posts/memos/04-docker.md","ref":"posts/memos/04-docker.md","articles":[]},"previous":{"title":"02. Rancher","level":"1.2.2","depth":2,"path":"posts/memos/02-rancher.md","ref":"posts/memos/02-rancher.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","chapter-fold","intopic-toc","code","-sharing","-highlight","prism","prism-themes","flexible-alerts","custom-favicon","back-to-top-button","logo","-lunr","-search","search-pro"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-vsc-dark-plus.css"]},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"Contents","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"search-pro":{},"logo":{"logo":"/assets/images/logo.png","logoStyle":"height: 40px;","url":"https://royalahn.github.io"},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":1},"favicon":"assets/images/book.png","lightbox":{"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":200}},"back-to-top-button":{},"prism-themes":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"","style":"background: none; max-height: 40px;"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/03-gitbook.md","mtime":"2022-08-24T14:57:30.132Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-24T14:58:36.838Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -429,10 +425,6 @@ gitbook <span class="token function">install</span> <span class="token operator"
     
         
         <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
         
     
         

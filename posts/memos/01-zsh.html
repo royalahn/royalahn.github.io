@@ -33,7 +33,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-dracula.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-vsc-dark-plus.css">
                 
             
                 
@@ -46,10 +46,6 @@
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
                 
             
                 
@@ -294,11 +290,11 @@
 <p>[!TIP]
 &#xCC38;&#xACE0;: <a href="https://github.com/ohmyzsh/ohmyzsh" target="_blank">GitHub ohmyzsh/ohmyzsh</a></p>
 </blockquote>
-<pre class="language-"><code class="lang-bash"><span class="token function">sh</span> -c <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span><span class="token function">curl</span> -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="token variable">)</span></span>&quot;</span>
+<pre class="language-"><code class="lang-bash"><span class="token function">sh</span> <span class="token parameter variable">-c</span> <span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span><span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="token variable">)</span></span>&quot;</span>
 </code></pre>
 <p><br></p>
 <h3 id="21-&#xC0AC;&#xC6A9;&#xC790;-&#xAE30;&#xBCF8;-shell-&#xBCC0;&#xACBD;">2.1 &#xC0AC;&#xC6A9;&#xC790; &#xAE30;&#xBCF8; Shell &#xBCC0;&#xACBD;</h3>
-<pre class="language-"><code class="lang-bash">chsh -s <span class="token variable"><span class="token variable">$(</span><span class="token function">which</span> <span class="token function">zsh</span><span class="token variable">)</span></span> <span class="token environment constant">$USER</span>
+<pre class="language-"><code class="lang-bash">chsh <span class="token parameter variable">-s</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">which</span> <span class="token function">zsh</span><span class="token variable">)</span></span> <span class="token environment constant">$USER</span>
 </code></pre>
 <p><br></p>
 <h2 id="3-zsh-plugins-&#xC124;&#xCE58;">3. zsh plugins &#xC124;&#xCE58;</h2>
@@ -307,13 +303,13 @@
 &#xCC38;&#xACE0;: <a href="https://github.com/zsh-users" target="_blank">GitHub zsh-users</a></p>
 </blockquote>
 <pre class="language-"><code class="lang-bash"><span class="token comment"># zsh-syntax-highlighting</span>
-<span class="token function">git</span> clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="token variable">${ZSH_CUSTOM<span class="token operator">:-</span>~<span class="token operator">/</span>.oh-my-zsh<span class="token operator">/</span>custom}</span>/plugins/zsh-syntax-highlighting --depth <span class="token number">1</span>
+<span class="token function">git</span> clone https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="token variable">${ZSH_CUSTOM<span class="token operator">:-</span>~<span class="token operator">/</span>.oh-my-zsh<span class="token operator">/</span>custom}</span>/plugins/zsh-syntax-highlighting <span class="token parameter variable">--depth</span> <span class="token number">1</span>
 </code></pre>
 <pre class="language-"><code class="lang-bash"><span class="token comment"># zsh-autosuggestions</span>
-<span class="token function">git</span> clone https://github.com/zsh-users/zsh-autosuggestions <span class="token variable">${ZSH_CUSTOM<span class="token operator">:-</span>~<span class="token operator">/</span>.oh-my-zsh<span class="token operator">/</span>custom}</span>/plugins/zsh-autosuggestions --depth <span class="token number">1</span>
+<span class="token function">git</span> clone https://github.com/zsh-users/zsh-autosuggestions <span class="token variable">${ZSH_CUSTOM<span class="token operator">:-</span>~<span class="token operator">/</span>.oh-my-zsh<span class="token operator">/</span>custom}</span>/plugins/zsh-autosuggestions <span class="token parameter variable">--depth</span> <span class="token number">1</span>
 </code></pre>
 <pre class="language-"><code class="lang-bash"><span class="token comment"># zsh-completions</span>
-<span class="token function">git</span> clone https://github.com/zsh-users/zsh-completions <span class="token variable">${ZSH_CUSTOM<span class="token operator">:=</span>~<span class="token operator">/</span>.oh-my-zsh<span class="token operator">/</span>custom}</span>/plugins/zsh-completions --depth <span class="token number">1</span>
+<span class="token function">git</span> clone https://github.com/zsh-users/zsh-completions <span class="token variable">${ZSH_CUSTOM<span class="token operator">:=</span>~<span class="token operator">/</span>.oh-my-zsh<span class="token operator">/</span>custom}</span>/plugins/zsh-completions <span class="token parameter variable">--depth</span> <span class="token number">1</span>
 </code></pre>
 <p><br></p>
 <h3 id="31-&#xC124;&#xCE58;&#xD55C;-plugins-&#xC0AC;&#xC6A9;&#xD558;&#xAE30;">3.1 &#xC124;&#xCE58;&#xD55C; plugins &#xC0AC;&#xC6A9;&#xD558;&#xAE30;</h3>
@@ -323,7 +319,7 @@
 <span class="token assign-left variable">plugins</span><span class="token operator">=</span><span class="token punctuation">(</span>git zsh-autosuggestions zsh-syntax-highlighting zsh-completions<span class="token punctuation">)</span>
 
 <span class="token comment"># sed&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xBCC0;&#xACBD;</span>
-<span class="token function">sed</span> -i <span class="token string">&apos;s/(git)/(git zsh-autosuggestions zsh-syntax-highlighting zsh-completions)/&apos;</span> ~/.zshrc
+<span class="token function">sed</span> <span class="token parameter variable">-i</span> <span class="token string">&apos;s/(git)/(git zsh-autosuggestions zsh-syntax-highlighting zsh-completions)/&apos;</span> ~/.zshrc
 </code></pre>
 <pre class="language-"><code class="lang-bash"><span class="token builtin class-name">source</span> ~/.zshrc
 </code></pre>
@@ -335,7 +331,7 @@
 <span class="token assign-left variable">ZSH_THEME</span><span class="token operator">=</span><span class="token string">&quot;agnoster&quot;</span>
 
 <span class="token comment"># sed&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xBCC0;&#xACBD;</span>
-<span class="token function">sed</span> -i <span class="token string">&apos;s/robbyrussell/agnoster/&apos;</span> ~/.zshrc
+<span class="token function">sed</span> <span class="token parameter variable">-i</span> <span class="token string">&apos;s/robbyrussell/agnoster/&apos;</span> ~/.zshrc
 </code></pre>
 <pre class="language-"><code class="lang-bash"><span class="token builtin class-name">source</span> ~/.zshrc
 </code></pre>
@@ -348,7 +344,7 @@
 </code></pre>
 <pre class="language-"><code class="lang-bash"><span class="token comment"># Context: user@hostname (who am I and where am I)</span>
 <span class="token function-name function">prompt_context</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">&quot;<span class="token variable">$USERNAME</span>&quot;</span> <span class="token operator">!=</span> <span class="token string">&quot;<span class="token variable">$DEFAULT_USER</span>&quot;</span> <span class="token operator">||</span> -n <span class="token string">&quot;<span class="token variable">$SSH_CLIENT</span>&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+  <span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">&quot;<span class="token variable">$USERNAME</span>&quot;</span> <span class="token operator">!=</span> <span class="token string">&quot;<span class="token variable">$DEFAULT_USER</span>&quot;</span> <span class="token operator">||</span> <span class="token parameter variable">-n</span> <span class="token string">&quot;<span class="token variable">$SSH_CLIENT</span>&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
     prompt_segment black default <span class="token string">&quot;%(!.%{ %F{yellow}% }.)%n@%m&quot;</span>
   <span class="token keyword">fi</span>
 <span class="token punctuation">}</span>
@@ -356,7 +352,7 @@
 <p>&#xC5D0;&#xC11C; &#xC6D0;&#xD558;&#xB294; &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xBCC0;&#xACBD; (<code>user</code>&#xB9CC; &#xB098;&#xC624;&#xAC8C;)</p>
 <pre class="language-"><code class="lang-bash">ex<span class="token punctuation">)</span> prompt_segment black default <span class="token string">&quot;%(!.%{ %F{yellow}% }.)%n&quot;</span>
 </code></pre>
-<script>document.addEventListener("DOMContentLoaded", function() {lightbox.option({"resizeDuration":200});})</script>
+
                                 
                                 </section>
                             
@@ -399,7 +395,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"01. Zsh","level":"1.2.1","depth":2,"next":{"title":"02. Rancher","level":"1.2.2","depth":2,"path":"posts/memos/02-rancher.md","ref":"posts/memos/02-rancher.md","articles":[]},"previous":{"title":"Memos","level":"1.2","depth":1,"path":"posts/memos/README.md","ref":"posts/memos/README.md","articles":[{"title":"01. Zsh","level":"1.2.1","depth":2,"path":"posts/memos/01-zsh.md","ref":"posts/memos/01-zsh.md","articles":[]},{"title":"02. Rancher","level":"1.2.2","depth":2,"path":"posts/memos/02-rancher.md","ref":"posts/memos/02-rancher.md","articles":[]},{"title":"03. Gitbook","level":"1.2.3","depth":2,"path":"posts/memos/03-gitbook.md","ref":"posts/memos/03-gitbook.md","articles":[]},{"title":"04. Docker","level":"1.2.4","depth":2,"path":"posts/memos/04-docker.md","ref":"posts/memos/04-docker.md","articles":[]},{"title":"05. Algorithm","level":"1.2.5","depth":2,"path":"posts/memos/05-algorithm.md","ref":"posts/memos/05-algorithm.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["splitter","chapter-fold","intopic-toc","code","-sharing","-highlight","prism","prism-themes","flexible-alerts","custom-favicon","back-to-top-button","logo","-lunr","-search","search-pro","lightbox"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-dracula.css"]},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"Contents","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"search-pro":{},"logo":{"logo":"/assets/images/logo.png","logoStyle":"height: 40px;","url":"https://royalahn.github.io"},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":1},"favicon":"assets/images/book.png","lightbox":{"jquery":true,"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":200}},"back-to-top-button":{},"prism-themes":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"","style":"background: none; max-height: 40px;"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/01-zsh.md","mtime":"2022-04-20T14:11:11.880Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-20T14:12:03.450Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"01. Zsh","level":"1.2.1","depth":2,"next":{"title":"02. Rancher","level":"1.2.2","depth":2,"path":"posts/memos/02-rancher.md","ref":"posts/memos/02-rancher.md","articles":[]},"previous":{"title":"Memos","level":"1.2","depth":1,"path":"posts/memos/README.md","ref":"posts/memos/README.md","articles":[{"title":"01. Zsh","level":"1.2.1","depth":2,"path":"posts/memos/01-zsh.md","ref":"posts/memos/01-zsh.md","articles":[]},{"title":"02. Rancher","level":"1.2.2","depth":2,"path":"posts/memos/02-rancher.md","ref":"posts/memos/02-rancher.md","articles":[]},{"title":"03. Gitbook","level":"1.2.3","depth":2,"path":"posts/memos/03-gitbook.md","ref":"posts/memos/03-gitbook.md","articles":[]},{"title":"04. Docker","level":"1.2.4","depth":2,"path":"posts/memos/04-docker.md","ref":"posts/memos/04-docker.md","articles":[]},{"title":"05. Algorithm","level":"1.2.5","depth":2,"path":"posts/memos/05-algorithm.md","ref":"posts/memos/05-algorithm.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["splitter","chapter-fold","intopic-toc","code","-sharing","-highlight","prism","prism-themes","flexible-alerts","custom-favicon","back-to-top-button","logo","-lunr","-search","search-pro"],"styles":{"website":"assets/css/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-vsc-dark-plus.css"]},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"Contents","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"search-pro":{},"logo":{"logo":"/assets/images/logo.png","logoStyle":"height: 40px;","url":"https://royalahn.github.io"},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":1},"favicon":"assets/images/book.png","lightbox":{"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":200}},"back-to-top-button":{},"prism-themes":{},"custom-favicon":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"","style":"background: none; max-height: 40px;"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Hugh GitBook","gitbook":"*"},"file":{"path":"posts/memos/01-zsh.md","mtime":"2022-08-24T14:57:30.132Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-24T14:58:36.838Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -446,10 +442,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
         
     
         
