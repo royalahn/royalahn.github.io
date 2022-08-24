@@ -1,19 +1,19 @@
-@import 'fonts.css';
+@import "fonts.css";
 
 body {
   letter-spacing: 0;
 }
 
 .book.font-family-0 {
-  font-family: 'GangwonEdu', serif;
+  font-family: "GangwonEdu", serif;
 }
 
 .book.font-family-1 {
-  font-family: 'Quicksand', 'IBMPlexSansKR', sans-serif;
+  font-family: "Quicksand", "IBMPlexSansKR", sans-serif;
 }
 
 .summary {
-  font-family: 'Quicksand', 'IBMPlexSansKR', sans-serif;
+  font-family: "Quicksand", "IBMPlexSansKR", sans-serif;
   font-size: 13px;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 #book-search-input {
-  font-family: 'Quicksand', 'IBMPlexSansKR', sans-serif;
+  font-family: "Quicksand", "IBMPlexSansKR", sans-serif;
 }
 
 li > a.gitbook-link {
@@ -37,4 +37,8 @@ li > a.gitbook-link {
 .markdown-section hr {
   height: 1px;
   background-color: #e0e0e0;
+}
+
+.book .book-summary {
+  background-color: #ffffff;
 }
