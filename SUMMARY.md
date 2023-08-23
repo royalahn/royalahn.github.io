@@ -7,6 +7,7 @@
   - [03. Gitbook](/posts/memos/03-gitbook.md)
   - [04. Docker](/posts/memos/04-docker.md)
   - [05. Algorithm](/posts/memos/05-algorithm.md)
+  - [06. Temp](/posts/memos/06-temp.md)
 
 ## Link
 
